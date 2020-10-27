@@ -1,11 +1,11 @@
-@import "bootstrap/dist/css/bootstrap.css";
+@import "bootstrap/scss/bootstrap.scss";
 @import "./font.css";
 
 html {
   font-size: 12px;
   margin: 0;
   padding: 0;
-  color: #020249;
+  color: #104879;
   scroll-behavior: smooth;
 }
 
@@ -14,7 +14,7 @@ $darkblue: #153e74;
 
 body {
   font-family: "Gilroy", sans-serif;
-  color: #020249;
+  color: #104879;
 }
 
 @media only screen and (min-width: 900px) {
@@ -30,12 +30,15 @@ body {
 
 p {
   font-size: 1rem;
+  &.sub {
+    font-size: 1.15rem;
+  }
 }
 
-section {
-  padding: 5rem 0;
+.section {
+  padding: 6rem 0;
   &--bg {
-    color: #fcfcfc;
+    background: #fcfcfc !important;
   }
 }
 

@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "./Navbar.scss";
 
 function Navbar() {
+
+    const activeStyle = { color: "#0056b3"}
+
     return (
         <>
             <nav className="nav d-flex align-items-center">
@@ -10,33 +13,33 @@ function Navbar() {
                     
                     <div className='nav__menu d-flex justify-content-between align-items-center px-5'>
                         <div className="nav__item-left d-flex align-items-center">
-                            <Link to="/" >
+                            <NavLink to="/"  exact>
                                 <img src="./images/logo.png" className="nav__logo"/>
-                            </Link>
+                            </NavLink>
                             <div>
-                                <Link to="/" className="nav__link">
+                                <NavLink to="/about" activeStyle={activeStyle} exact className="nav__link">
                                     About Us
-                                </Link>
-                                <Link to="/" className="nav__link">
+                                </NavLink>
+                                <NavLink to="/" exact className="nav__link">
                                     How it works
-                                </Link>
-                                <Link to="/" className="nav__link">
+                                </NavLink>
+                                <NavLink to="/" exact className="nav__link">
                                     Car valuation
-                                </Link>
-                                <Link to="/" className="nav__link">
+                                </NavLink>
+                                <NavLink to="/" exact className="nav__link">
                                     FAQs
-                                </Link>
+                                </NavLink>
                             </div>
                         </div>
 
                         
                         <div className="nav__item-right">
-                            <Link to="/" className="btn btn-outline mr-3">
+                            <NavLink to="/" exact className="btn btn-outline mr-3">
                                 Sign In
-                            </Link>
-                            <Link to="/" className="btn btn-white ">
+                            </NavLink>
+                            <NavLink to="/" exact className="btn btn-white ">
                                 Apply now
-                            </Link>
+                            </NavLink>
                         </div>
                         
                     </div>

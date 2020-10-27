@@ -24,8 +24,8 @@ function WhyList() {
         <>
            <div className="row why__list">
 
-                {data.map( item => {
-                    return <WhyItem data={item}/>
+                {data.map( (item, number) => {
+                    return <WhyItem key={number.toString()} data={item}/>
                 })}
 
             </div> 
