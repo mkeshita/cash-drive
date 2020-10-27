@@ -1,0 +1,23 @@
+.why {
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  &__icon-container {
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.21);
+  }
+  &__list {
+    padding-top: 5rem;
+  }
+  &__bg {
+    top: 0;
+    left: 0;
+  }
+  &__dots {
+    right: 0;
+    max-width: 100px;
+  }
+}

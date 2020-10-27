@@ -1,0 +1,20 @@
+$lightblue: #645eff;
+$darkblue: #153e74;
+
+.hero {
+  //   background-image: url(./images/hero-bg.jpg);
+  padding: 18rem 0 25rem 0;
+
+  &__title {
+    font-size: 4.5rem;
+    color: $darkblue;
+    font-weight: 900;
+    &__small {
+      color: $lightblue;
+      font-size: 2.2rem;
+    }
+  }
+  &__lead-text {
+    font-size: 1 19rem;
+  }
+}
