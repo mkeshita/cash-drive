@@ -11,7 +11,7 @@ function Strip() {
 
         <div className="text-right position-relateive d-flex justify-content-end flex-column">
           <a
-            href=""
+            href="#!"
             className="btn strip__btn bg-white px-5 mb-2 align-self-end d-flex align-items-center"
           >
             Get Offer

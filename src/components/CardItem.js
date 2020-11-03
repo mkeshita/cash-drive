@@ -12,7 +12,7 @@ function CardItem({data}) {
         className="card-item__icon-container position-relative"
         style={{background: data.color}}
       >
-        <img alt="icon" alt="icon" src={data.img} />
+        <img alt="icon" src={data.img} />
       </div>
 
       <h4 className="card-item__title mt-4 mb-3 position-relative">

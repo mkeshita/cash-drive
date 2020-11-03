@@ -43,21 +43,21 @@ function Footer() {
             <p className="footer__link">+234 817 555 6789</p>
             <p className="footer__link">+234 703 491 2176</p>
             <div className="footer__social-link d-flex align-items-end">
-              <a href="">
+              <a href="#!">
                 <img
                   src="./images/fb.svg"
                   style={{height: "18px", marginRight: "1rem"}}
                   alt="facebook"
                 />
               </a>
-              <a href="">
+              <a href="#!">
                 <img
                   src="./images/linkedin-in.svg"
                   style={{height: "20px", marginRight: "1rem"}}
                   alt="linkedIn"
                 />
               </a>
-              <a href="">
+              <a href="#!">
                 <img
                   src="./images/ins.svg"
                   style={{height: "18px", marginRight: "1rem"}}
@@ -87,7 +87,7 @@ function Footer() {
         src="./images/footer__bg.png"
         className=""
         style={{marginTop: "3rem", width: "100%"}}
-        alt="background image"
+        alt="background"
       />
     </footer>
   );

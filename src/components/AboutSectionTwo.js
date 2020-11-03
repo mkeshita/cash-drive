@@ -46,7 +46,7 @@ function AboutSectionTwo() {
           <div className="col-md-6">
             <img
               src="./images/about-img.jpg"
-              alt="about image"
+              alt="about"
               style={{width: "100%", borderRadius: "12px"}}
             />
           </div>

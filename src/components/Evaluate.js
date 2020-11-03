@@ -12,6 +12,7 @@ function Evaluate() {
       <img
         src="./images/e-pattern.png"
         className="position-absolute eval__pattern"
+        alt="pattern"
       />
       <div className="container">
         <h3 className="title">Evaluate your car</h3>

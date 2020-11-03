@@ -40,19 +40,19 @@ function Navbar({currentPath}) {
             </div>
             {currentPath.pathname === "/faq" || "/about" ? (
               <div className="nav__item-right">
-                <a href="#" className="btn btn-outline btn-outline--blue mr-3">
+                <a href="#!" className="btn btn-outline btn-outline--blue mr-3">
                   Sign In
                 </a>
-                <a href="" exact className="btn btn__blue text-white">
+                <a href="#!" exact className="btn btn__blue text-white">
                   Apply now
                 </a>
               </div>
             ) : (
               <div className="nav__item-right">
-                <a href="#" className="btn btn-outline  mr-3">
+                <a href="#!" className="btn btn-outline  mr-3">
                   Sign In
                 </a>
-                <a href="" exact className="btn btn__white">
+                <a href="#!" exact className="btn btn__white">
                   Apply now
                 </a>
               </div>

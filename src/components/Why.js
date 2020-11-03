@@ -9,7 +9,6 @@ function Why() {
         src="./images/why-bg.png"
         alt="absolute background"
         className="position-absolute why__bg"
-        alt="background image"
       />
       <img
         src="./images/semi-dot.png"
