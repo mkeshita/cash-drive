@@ -1,19 +1,22 @@
-import React from 'react';
-import Hero from "../Hero";
-import Why from "../Why";
-import Works from "../Works"
-
-
+import React from "react";
+import AboutHero from "../AboutHero";
+import Strip from "../Strip";
+import AboutSection from "../AboutSection";
+import AboutSectionTwo from "../AboutSectionTwo";
+import Testimonial from "../Testimonial";
 
 function About() {
-    return (
-        <>
-            <about>
-                I am about us page
-            </about>
-        </>
-    )
+  return (
+    <>
+      <about>
+        <AboutHero />
+        <AboutSection />
+        <AboutSectionTwo />
+        <Testimonial />
+        <Strip />
+      </about>
+    </>
+  );
 }
 
 export default About;
-

@@ -3,7 +3,7 @@ $darkblue: #153e74;
 
 .hero {
   //   background-image: url(./images/hero-bg.jpg);
-  padding: 18rem 0 25rem 0;
+  padding: 14rem 0 5rem 0;
 
   &__title {
     font-size: 4.5rem;
@@ -16,5 +16,12 @@ $darkblue: #153e74;
   }
   &__lead-text {
     font-size: 1 19rem;
+  }
+  &__faq {
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fcfcfc;
   }
 }

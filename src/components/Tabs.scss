@@ -1,0 +1,20 @@
+.tabs {
+  &__inner {
+    cursor: pointer;
+    span {
+      color: #999;
+      display: block;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #c4c4c4;
+    }
+
+    &.active {
+      span {
+        color: #020249;
+        border-bottom: 2px solid #fe9e00;
+        font-weight: 500;
+      }
+    }
+  }
+}

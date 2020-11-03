@@ -1,0 +1,18 @@
+[
+  {
+    "question": "fat",
+    "id": "0"
+  },
+  {
+    "type": "thin",
+    "id": "1"
+  },
+  {
+    "type": "short",
+    "id": "2"
+  },
+  {
+    "type": "tall",
+    "id": "3"
+  }
+]

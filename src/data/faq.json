@@ -1,0 +1,95 @@
+[
+  {
+    "question": "What is a CashDrive Loan Offer?",
+    "answer": "CashDrive offers quick loans to car owners and you still get to keep your car. A CashDrive loan is a form of short-term finance where you can use your car as security for a loan. You can borrow a percentage of the forced sale value of your vehicle and pay the money back in flexible, equal instalments within the agreed period. Please note that your vehicle must be free from any encumbrance / lien.",
+    "id": "1"
+  },
+  {
+    "question": "What do I need to get a CashDrive Loan?",
+    "answer": "To qualify for a loan, you need to be the legal and registered owner of your vehicle. You will be required to hand over your vehicle documents and agree to the transfer of legal ownership to us to access the loan. Once the loan is repaid in full, your vehicle documents will be returned and legal ownership of the vehicle reverts back to you.",
+    "id": "2"
+  },
+  {
+    "question": "How much can I borrow?",
+    "answer": "Our minimum loan amount is N200,000 and maximum is N20,000,000.",
+    "id": "3"
+  },
+  {
+    "question": "What is the maximum loan tenor?",
+    "answer": "Our maximum loan tenor is 12 months.",
+    "id": "4"
+  },
+  {
+    "question": "Why do you need my BVN?",
+    "answer": "We request BVN as this is used to verify that the individual applying for a Cashdrive loan is the same as the owner of the provided bank account. This is to ensure that a user’s details cannot be used to apply for a loan without your authorization in the event a 3rd party has access to your account details. \n Please note: <strong>Your BVN does not provide access to your account(s)<strong/>. If in doubt, we encourage confirming this from your bank before using our service.",
+    "id": "5"
+  },
+  {
+    "question": "Are there any extra fees / charges?",
+    "answer": "You will be required to pay a fixed percentage of your loan amount to cover administrative costs. You will also cover the costs of the car insurance and car tracker which becomes your property at the end of the credit facility. These charges are added to the total loan amount so you still get the cash that you need.",
+    "id": "6"
+  },
+  {
+    "question": "How soon can I get the cash?",
+    "answer": "Loans are approved, processed and disbursed within 24 hours. Once you have signed all the paperwork, and we complete the legal transfer of ownership of the vehicle, the money will be transferred to your account within minutes. It's really that easy!",
+    "id": "7"
+  },
+  {
+    "question": "Do I need to be employed? What if I am self-employed or a business owner?",
+    "answer": "No. We will process loan applications if you are self-employed or a business owner. Many of our customers are self-employed, and business owners.",
+    "id": "8"
+  },
+  {
+    "question": "Do you need my bank statements?",
+    "answer": "No, but as a responsible lender it may be required under certain circumstances to confirm whether you can realistically afford the contractual repayments. Bank statements are a great way of assessing your current individual circumstances.",
+    "id": "9"
+  },
+  {
+    "question": "Do I need a Guarantor?",
+    "answer": "Our no guarantor loans mean that you don't need to tell anyone about the loan if you don't want to and you won't need a guarantor to co-sign the loan agreement.",
+    "id": "10"
+  },
+  {
+    "question": "How do I repay my loan?",
+    "answer": "Repayments can be made via direct bank transfer, direct debit / standing orders or cash deposits into our bank account.    ",
+    "id": "11"
+  },
+  {
+    "question": "Can I repay early?",
+    "answer": "Yes, in fact we encourage you to. Many customers also make partial settlements when it is convenient to do so or pay in installments before their monthly repayment due dates to reduce the burden of a lump sum payment..    ",
+    "id": "12"
+  },
+  {
+    "question": "What happens if I fail to make repayments?",
+    "answer": "We may have to repossess and subsequently sell your car if this happens. Repossessions are uncommon but can occur in certain circumstances, if you find yourself in this position, we will sell the car on your behalf and use the sale funds to settle your debt. Anything left over once the loan has been settled will be given back to you. Repossession is not a desirable outcome for either party.",
+    "id": "13"
+  },
+  {
+    "question": "Why was my loan application unsuccessful?",
+    "answer": "There are a few reasons why your loan application was unsuccessful, see the list below:",
+    "list": [
+      {
+        "content": "We currently do not offer services in the State of your car registration",
+        "id": "u1"
+      },
+      {
+        "content": "We currently do not offer services in your State of residence",
+        "id": "u2"
+      },
+      {
+        "content": "We are only able to offer loans to the registered owner of the car",
+        "id": "u3"
+      },
+      {
+        "content": "The value of your car does not meet the minimum requirement for a loan",
+        "id": "u4"
+      }
+    ],
+    "id": "13"
+  },
+  {
+    "question": "My question is not on this list?",
+    "answer": "If you have any more questions please call / whatsapp us on: 08028572566 / 07034912176 or email: info@cashdrive.co and we will be happy to further explain the process and answer any questions you have. Please take time to read and understand our FAQs to ensure our CashDrive loan product is suitable for your requirements.",
+    "id": "14"
+  }
+]

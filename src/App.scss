@@ -71,3 +71,28 @@ p {
     max-width: 1420px;
   }
 }
+
+.form-restrict {
+  max-width: 500px;
+}
+
+.btn {
+  height: 50px;
+  &-orange {
+    background: #fe9e00;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-outline {
+    background: transparent;
+    color: $darkblue !important;
+    border: 1px solid $darkblue !important;
+    border-radius: 5px;
+  }
+  &__blue {
+    background: $darkblue !important;
+    color: #fff !important;
+  }
+}

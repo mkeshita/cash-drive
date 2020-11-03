@@ -1,0 +1,21 @@
+.ex {
+  &__icon-container {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 1.2rem;
+    margin-top: 1.6rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  &__pattern {
+    bottom: 3rem;
+    right: 0;
+    z-index: 0;
+  }
+}

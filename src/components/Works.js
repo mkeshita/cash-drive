@@ -15,14 +15,14 @@ function Works() {
                 </p>
 
                 <Cards />
-                
+
             </div>
             
         </section>
     )
 }
 
-export default Works
+export default Works;
 
 
 // sorogate mother
