@@ -6,32 +6,6 @@ import "swiper/swiper.scss";
 import Rate from "./Rate";
 
 function Slider({onSliderChange, cswiper}) {
-  const slides = [
-    {
-      name: "Bernard Oguche",
-      content:
-        "&ldquo;Every aspect of CashDrive's operation is excellent. Your loan facility made most of my financial endeavours a success. CashDrive is the best amongst all the financial institutions in Nigeria. I will recommend them to anyone in need of quick and easy short term loans&rdquo;.",
-      rating: 5,
-      image: "./images/avatar-one.jpg",
-      id: "01",
-    },
-    {
-      name: "Oshione Umolu",
-      content:
-        "&ldquo;CashDrive is so swift with its disbursements and has a highly professional customer service. In one word I will call their services “nonpareil” …keep it up&rdquo;.",
-      rating: 5,
-      image: "./images/avatar-one.jpg",
-      id: "02",
-    },
-    {
-      name: "Prince Chigozie Rowland",
-      content:
-        "&ldquo;I highly recommend CashDrive to anyone in need of urgent loan facility. I have used them severally and I attest to their efficiency and reliability&ldquo;.",
-      rating: 5,
-      image: "./images/avatar-one.jpg",
-      id: "03",
-    },
-  ];
   const [tHeight, setTHeight] = useState(0);
 
   // const [currentSlide, setCurrentSlide] = useState[0];
@@ -65,7 +39,7 @@ function Slider({onSliderChange, cswiper}) {
           <div className="testimonial__header d-flex align-items-center">
             <div className="testimonial__avatar-container">
               <img
-                alt="user Image"
+                alt="user"
                 style={{height: "100%", width: "100%"}}
                 src="./images/avatar-one.jpg"
               />
@@ -100,7 +74,7 @@ function Slider({onSliderChange, cswiper}) {
           <div className="testimonial__header d-flex align-items-center">
             <div className="testimonial__avatar-container">
               <img
-                alt="user Image"
+                alt="user"
                 style={{height: "100%", width: "100%"}}
                 src="./images/avatar-one.jpg"
               />
@@ -133,7 +107,7 @@ function Slider({onSliderChange, cswiper}) {
           <div className="testimonial__header d-flex align-items-center">
             <div className="testimonial__avatar-container">
               <img
-                alt="user Image"
+                alt="user"
                 style={{height: "100%", width: "100%"}}
                 src="./images/avatar-one.jpg"
               />
