@@ -22,12 +22,19 @@ function Navbar({currentPath}) {
                 >
                   About Us
                 </NavLink>
-                <a href="/#how-it-works" exact className="nav__link">
-                  How it works
-                </a>
-                <a href="/#car-valuation" exact className="nav__link" id="">
-                  Car valuation
-                </a>
+
+                {currentPath.pathname === "/" && (
+                  <a href="/#how-it-works" exact className="nav__link">
+                    How it works
+                  </a>
+                )}
+
+                {currentPath.pathname === "/" && (
+                  <a href="/#car-valuation" exact className="nav__link" id="">
+                    Car valuation
+                  </a>
+                )}
+
                 <NavLink
                   to="/faq"
                   activeStyle={activeStyle}
