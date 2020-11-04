@@ -1,9 +1,12 @@
 import React, {useState, useRef, useEffect} from "react";
+import Rate from "./Rate";
 import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {Autoplay} from "swiper";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
-import Rate from "./Rate";
+
+SwiperCore.use([Autoplay]);
 
 function Slider({onSliderChange, cswiper}) {
   const [tHeight, setTHeight] = useState(0);
@@ -25,9 +28,19 @@ function Slider({onSliderChange, cswiper}) {
 
   return (
     <Swiper
+      breakpoints={{
+        // when window width is >= 640px
+        0: {
+          slidesPerView: 1,
+        },
+        // when window width is >= 768px
+        1160: {
+          slidesPerView: 2,
+        },
+      }}
       spaceBetween={15}
       loop={true}
-      slidesPerView={2}
+      autoplay={true}
       onSlideChange={(swiper) => onSliderChange(swiper.realIndex)}
       navigation={true}
       onSwiper={(swiper) => {

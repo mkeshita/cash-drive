@@ -14,9 +14,9 @@ function FaqHero() {
         className="hero__faq"
         style={{
           backgroundImage: `url(./images/faq.bg.png)`,
-          // backgroundRepeat: "no-repeat",
-          backgroundPosition: "right -50%",
-          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <h1 className="title text-center mt-3">

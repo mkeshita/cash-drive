@@ -4,13 +4,13 @@ import "./Testimonial.scss";
 
 function Testimonial() {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [swiper, setswiper] = useState("");
+  const [swiper, setswiper] = useState(false);
 
   return (
     <section className="section">
       <div className="container">
         <div className="row align-items-center mt-4">
-          <div className="col-sm-6 col-md-4">
+          <div className="col-md-4">
             <h5 className="title--small">Testimonials</h5>
             <h3 className="title">Reviews from real clients</h3>
             <div
@@ -19,8 +19,9 @@ function Testimonial() {
             >
               {swiper && (
                 <div
-                  className="testimonial__control shadow d-flex align-items-center justify-content-center"
+                  className="testimonial__control my-4 position-relative shadow d-flex align-items-center justify-content-center"
                   onClick={() => swiper.swiper.slidePrev()}
+                  style={{zIndex: 200}}
                 >
                   <img
                     alt="left arrow"
@@ -45,7 +46,7 @@ function Testimonial() {
               )}
             </div>
           </div>
-          <div className="col-sm-6 col-md-8 position-relative">
+          <div className="col-md-8 position-relative">
             <img
               src="./images/testimonial-pattern.png"
               className="testimonial__pattern"

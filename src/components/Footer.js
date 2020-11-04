@@ -9,8 +9,11 @@ function Footer() {
       style={{backgroundImage: `url(./images)`}}
     >
       <div className="container">
-        <div className="d-flex align-items-start justify-content-between">
-          <div className="footer__item">
+        <div
+          className="d-flex flex-wrap
+         align-items-start justify-content-between"
+        >
+          <div className="footer__item mb-5 mb-sm-0 ">
             <img
               className="footer__logo"
               src="./images/logo.png"
@@ -22,7 +25,7 @@ function Footer() {
               metus ac hac amet ut temp.
             </p>
           </div>
-          <div className="footer__item">
+          <div className="footer__item mb-5 mb-sm-0 ">
             <h5 className="footer__title">Information</h5>
             <NavLink to="/about" exact className="footer__link">
               About us
@@ -37,12 +40,12 @@ function Footer() {
               Privacy Policy
             </NavLink>
           </div>
-          <div className="footer__item">
+          <div className="footer__item mb-5 mb-sm-0 ">
             <h5 className="footer__title">Contact</h5>
             <p className="footer__link">+234 802 857 2566 </p>
             <p className="footer__link">+234 817 555 6789</p>
             <p className="footer__link">+234 703 491 2176</p>
-            <div className="footer__social-link d-flex align-items-end">
+            <div className="footer__social-link d-flex align-items-sm-end justify-content-center justify-content-sm-start">
               <a href="#!">
                 <img
                   src="./images/fb.svg"
@@ -66,7 +69,7 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div className="footer__item">
+          <div className="footer__item mb-5 mb-sm-0 ">
             <h5 className="footer__title">Address</h5>
             <div>
               <h6 className="footer__title footer__title--sub">Lagos Office</h6>

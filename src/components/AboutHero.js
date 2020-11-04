@@ -7,9 +7,9 @@ function AboutHero() {
       className="d-flex justify-content-center align-items-center about__hero"
       style={{
         backgroundImage: `url(./images/faq.bg.png)`,
-        // backgroundRepeat: "no-repeat",
-        backgroundPosition: "right -50%",
-        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       <h1 className="title">About Cashdrive Loans</h1>

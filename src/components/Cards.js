@@ -8,18 +8,21 @@ function Cards() {
       textContent: "Submit loan request and car details",
       color: "#FFE2E4",
       img: "./images/edit-list.svg",
+      delay: 300,
     },
     {
       title: "Schedule inspection",
       textContent: "Get instant offer & schedule car inspection",
       color: "#DBF8EE",
       img: "./images/date.svg",
+      delay: 600,
     },
     {
       title: "Get Credited",
       textContent: "Sign documentation & get cash in minutes",
       color: "#E2EBFF",
       img: "./images/credit-card-payment.svg",
+      delay: 900,
     },
   ];
   return (

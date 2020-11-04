@@ -3,10 +3,11 @@
     font-size: 0.9rem;
   }
   &__item {
-    width: 20%;
-    &:first-child {
-      width: 25%;
-    }
+    width: 100%;
+    text-align: center;
+    // &:first-child {
+    //   // width: 25%;
+    // }
   }
   &__title {
     font-weight: 700;
@@ -23,5 +24,24 @@
     color: #104879;
     display: block;
     margin-bottom: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .footer__item {
+    width: 50%;
+    text-align: left;
+  }
+  .footer__social {
+    align-items: center !important;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .footer__item {
+    width: 20%;
+    text-align: left;
+  }
+  .footer__item:first-child {
+    width: 25%;
   }
 }

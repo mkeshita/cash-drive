@@ -3,14 +3,14 @@ $darkblue: #153e74;
 
 .hero {
   //   background-image: url(./images/hero-bg.jpg);
-  padding: 14rem 0 5rem 0;
+  padding: 10rem 0 5rem 0;
 
   &__title {
     font-size: 4.5rem;
-    color: $darkblue;
+    color: #4c473f;
     font-weight: 900;
     &__small {
-      color: $lightblue;
+      color: #e26511;
       font-size: 2.2rem;
     }
   }
@@ -22,6 +22,6 @@ $darkblue: #153e74;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fcfcfc;
+    background: #eaf5ff;
   }
 }

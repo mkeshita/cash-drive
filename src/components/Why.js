@@ -1,6 +1,7 @@
 import React from "react";
 import WhyList from "./WhyList";
 import "./Why.scss";
+import Fade from "react-reveal/Fade";
 
 function Why() {
   return (
@@ -16,8 +17,10 @@ function Why() {
         className="position-absolute why__dots"
       />
       <div className="container">
-        <h4 className="title--small">What people are saying</h4>
-        <h3 className="title">Why Cashdrive</h3>
+        <Fade left>
+          <h4 className="title--small">What people are saying</h4>
+          <h3 className="title">Why Cashdrive</h3>
+        </Fade>
 
         <WhyList />
       </div>

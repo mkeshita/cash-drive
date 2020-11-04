@@ -8,7 +8,7 @@ function Navbar({currentPath}) {
     <>
       <nav className="nav d-flex align-items-center">
         <div className="container-fluid d-flex">
-          <div className="nav__menu d-flex justify-content-between align-items-center px-5">
+          <div className="nav__menu d-lg-flex justify-content-between align-items-center px-5">
             <div className="nav__item-left d-flex align-items-center">
               <NavLink to="/" exact>
                 <img src="./images/logo.png" className="nav__logo" alt="logo" />
@@ -22,10 +22,10 @@ function Navbar({currentPath}) {
                 >
                   About Us
                 </NavLink>
-                <NavLink to="/" exact className="nav__link">
+                <a href="/#how-it-works" exact className="nav__link">
                   How it works
-                </NavLink>
-                <a href="#car-valuation" exact className="nav__link" id="">
+                </a>
+                <a href="/#car-valuation" exact className="nav__link" id="">
                   Car valuation
                 </a>
                 <NavLink
@@ -38,21 +38,21 @@ function Navbar({currentPath}) {
                 </NavLink>
               </div>
             </div>
-            {currentPath.pathname === "/faq" || "/about" ? (
-              <div className="nav__item-right">
-                <a href="#!" className="btn btn-outline btn-outline--blue mr-3">
-                  Sign In
-                </a>
-                <a href="#!" exact className="btn btn__blue text-white">
-                  Apply now
-                </a>
-              </div>
-            ) : (
+            {currentPath.pathname === "/" ? (
               <div className="nav__item-right">
                 <a href="#!" className="btn btn-outline  mr-3">
                   Sign In
                 </a>
                 <a href="#!" exact className="btn btn__white">
+                  Apply now
+                </a>
+              </div>
+            ) : (
+              <div className="nav__item-right">
+                <a href="#!" className="btn btn-outline btn-outline--blue mr-3">
+                  Sign In
+                </a>
+                <a href="#!" exact className="btn btn__blue text-white">
                   Apply now
                 </a>
               </div>

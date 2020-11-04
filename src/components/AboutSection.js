@@ -6,7 +6,7 @@ function AboutSection() {
       <div className="container">
         <div className="row align-items-start justify-content-between">
           <div className="col-sm-3 text-align-right">
-            <h1 className="title mt-3" style={{fontSize: "3rem"}}>
+            <h1 className="title mt-0" style={{fontSize: "3rem"}}>
               Our Story
             </h1>
           </div>

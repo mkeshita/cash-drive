@@ -5,16 +5,16 @@ html {
   font-size: 12px;
   margin: 0;
   padding: 0;
-  color: #104879;
+  color: #4c473f;
   scroll-behavior: smooth;
 }
 
 $lightblue: #645eff;
-$darkblue: #153e74;
+$darkblue: #4c473f;
 
 body {
   font-family: "Gilroy", sans-serif;
-  color: #104879;
+  color: #4c473f;
 }
 
 @media only screen and (min-width: 900px) {
@@ -30,6 +30,7 @@ body {
 
 p {
   font-size: 1rem;
+  color: #4c473f;
   &.sub {
     font-size: 1.15rem;
   }
@@ -79,7 +80,7 @@ p {
 .btn {
   height: 50px;
   &-orange {
-    background: #fe9e00;
+    background: #e26511;
     color: #fff;
     &:hover {
       color: #fff;
