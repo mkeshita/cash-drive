@@ -23,11 +23,9 @@ function Navbar({currentPath}) {
                   About Us
                 </NavLink>
 
-                {currentPath.pathname === "/" && (
-                  <a href="/#how-it-works" exact className="nav__link">
-                    How it works
-                  </a>
-                )}
+                <NavLink to="/how-it-works" exact className="nav__link">
+                  How it works
+                </NavLink>
 
                 {currentPath.pathname === "/" && (
                   <a href="/#car-valuation" exact className="nav__link" id="">
@@ -64,6 +62,53 @@ function Navbar({currentPath}) {
                 </a>
               </div>
             )}
+          </div>
+          <div className="nav__menu-mobile d-block d-lg-none">
+            <div className="nav__menu-mobile__header d-flex align-items-center justify-content-between">
+              <NavLink to="/" exact>
+                <img src="./images/logo.png" alt="logo" />
+              </NavLink>
+              <div className="nav__menu-mobile-btn">
+                <span className="nav__menu-mobile-line"></span>
+                <span className="nav__menu-mobile-line"></span>
+                <span className="nav__menu-mobile-line"></span>
+              </div>
+            </div>
+            <div className="nav__menu-mobile-links">
+              <NavLink
+                to="/about"
+                className="nav__menu-mobile-link-item d-block"
+              >
+                About us
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="nav__menu-mobile-link-item d-block"
+              >
+                How it works
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="nav__menu-mobile-link-item d-block"
+              >
+                Car valuation
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="nav__menu-mobile-link-item d-block"
+              >
+                FAQs
+              </NavLink>
+              <a
+                href="#!"
+                className="btn btn-block btn-outline btn-outline--blue"
+              >
+                Sign In
+              </a>
+              <a href="#!" className="btn btn-block btn-blue">
+                Apply Now
+              </a>
+            </div>
           </div>
         </div>
       </nav>

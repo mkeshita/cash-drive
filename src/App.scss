@@ -52,6 +52,9 @@ p {
     color: $lightblue;
     font-size: 1rem;
   }
+  &--hero {
+    font-size: 3.2rem;
+  }
 }
 
 .container {
@@ -96,4 +99,8 @@ p {
     background: $darkblue !important;
     color: #fff !important;
   }
+}
+
+ul {
+  margin: 0 !important;
 }

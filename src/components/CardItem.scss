@@ -48,6 +48,9 @@
     & .card-item__hover-bg {
       transform: translateY(0%);
     }
+    & .card-item__link {
+      color: #fff !important;
+    }
   }
 }
 
