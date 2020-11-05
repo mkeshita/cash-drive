@@ -25,3 +25,9 @@ $darkblue: #153e74;
     background: #eaf5ff;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    background-image: unset !important;
+  }
+}

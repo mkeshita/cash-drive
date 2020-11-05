@@ -9,7 +9,6 @@ import "./App.scss";
 
 function App() {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <>
       <Navbar currentPath={location} />
