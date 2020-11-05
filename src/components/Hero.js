@@ -17,7 +17,7 @@ function Hero() {
       }}
     >
       {/* <img src="./images/hero-bg.jpg" className="hero__bg" /> */}
-      <div className=" px-5 mx-0 mx-md-5">
+      <div className=" px-md-5 mx-0 mx-md-5">
         <div className="row align-items-center">
           <div className="col-md-6 mb-5">
             <Fade left duration={1500}>

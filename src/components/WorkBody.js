@@ -95,6 +95,12 @@ function WorkBody() {
                     </span>
                   </div>
                 </Fade>
+                <a
+                  className="btn px-4 mt-3 btn-orange d-inline-flex align-items-center"
+                  href="#!"
+                >
+                  Apply Now
+                </a>
               </div>
             </div>
             <div className="col-md-6">
@@ -209,7 +215,13 @@ function WorkBody() {
                       sed do eiusmod tempor
                     </span>
                   </div>
-                </Fade>{" "}
+                </Fade>
+                <a
+                  className="btn px-4 mt-3 btn-orange d-inline-flex align-items-center"
+                  href="#!"
+                >
+                  Apply Now
+                </a>
               </div>
             </div>
           </div>
@@ -234,6 +246,12 @@ function WorkBody() {
                   standard dummy text ever since the 1500s.
                 </p>
               </Fade>
+              <a
+                className="btn px-4 mt-3 btn-orange d-inline-flex align-items-center"
+                href="#!"
+              >
+                Apply Now
+              </a>
             </div>
             <div className="col-md-6">
               <Zoom>
