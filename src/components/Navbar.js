@@ -3,16 +3,17 @@ import {NavLink} from "react-router-dom";
 import "./Navbar.scss";
 
 function Navbar({currentPath}) {
+  const ref = useRef(null);
   const activeStyle = {color: "#0056b3"};
-  const [show, setshow] = useState(false);
+  const [showNav, setshowNav] = useState(false);
 
   const handleClick = () => {
-    if (!show) {
+    if (!showNav) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-    setshow((show) => !show);
+    setshowNav((prev) => !prev);
   };
 
   useEffect(() => {
@@ -23,8 +24,6 @@ function Navbar({currentPath}) {
     };
   });
 
-  const ref = useRef(null);
-
   const handleNavigation = (e) => {
     const window = e.currentTarget;
     if (window.scrollY > 200) {
@@ -32,19 +31,13 @@ function Navbar({currentPath}) {
     } else {
       ref.current.classList.remove("sticky", "shadow");
     }
-
-    // if (previous > window.scrollY && window.scrollY > 400) {
-    //   ref.current.classList.add("shadow", "sticky");
-    // } else if (previous < window.scrollY && window.scrollY < 400) {
-    //   ref.current.classList.remove("shadow", "sticky");
-    // }
-    //  . previous = window.scrollY;
   };
 
   const closeNavigation = () => {
     console.log("did u call");
     document.body.style.overflow = "auto";
-    setshow(false);
+    window.scrollTo(0, 0);
+    setshowNav(false);
   };
 
   return (
@@ -103,14 +96,19 @@ function Navbar({currentPath}) {
           </div>
           <div
             className={
-              show
+              showNav
                 ? "show nav__menu-mobile px-4 d-block d-lg-none shadow"
                 : "nav__menu-mobile px-4 d-block d-lg-none"
             }
           >
             <div className="nav__menu-mobile__header d-flex align-items-center justify-content-between">
               <NavLink to="/" exact>
-                <img src="./images/logo.png" height="25" alt="logo" />
+                <img
+                  src="./images/logo.png"
+                  height="25"
+                  alt="logo"
+                  onClick={closeNavigation}
+                />
               </NavLink>
               <div className="nav__menu-mobile-btn" onClick={handleClick}>
                 <span className="nav__menu-mobile-line"></span>
@@ -127,21 +125,21 @@ function Navbar({currentPath}) {
                 About us
               </NavLink>
               <NavLink
-                to="/about"
+                to="/how-it-works"
                 className="nav__menu-mobile-link-item d-flex align-items-center justify-content-center"
                 onClick={closeNavigation}
               >
                 How it works
               </NavLink>
-              <NavLink
-                to="/about"
+              <a
+                href="/#car-valuation"
                 className="nav__menu-mobile-link-item d-flex align-items-center justify-content-center"
                 onClick={closeNavigation}
               >
                 Car valuation
-              </NavLink>
+              </a>
               <NavLink
-                to="/about"
+                to="/faq"
                 className="nav__menu-mobile-link-item d-flex align-items-center justify-content-center"
                 onClick={closeNavigation}
               >
