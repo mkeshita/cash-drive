@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import {NavLink} from "react-router-dom";
 import "./Navbar.scss";
 
@@ -15,6 +15,32 @@ function Navbar({currentPath}) {
     setshow((show) => !show);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => handleNavigation(e));
+
+    return () => {
+      window.addEventListener("scroll", (e) => handleNavigation(e));
+    };
+  });
+
+  const ref = useRef(null);
+
+  const handleNavigation = (e) => {
+    const window = e.currentTarget;
+    if (window.scrollY > 200) {
+      ref.current.classList.add("sticky", "shadow");
+    } else {
+      ref.current.classList.remove("sticky", "shadow");
+    }
+
+    // if (previous > window.scrollY && window.scrollY > 400) {
+    //   ref.current.classList.add("shadow", "sticky");
+    // } else if (previous < window.scrollY && window.scrollY < 400) {
+    //   ref.current.classList.remove("shadow", "sticky");
+    // }
+    //  . previous = window.scrollY;
+  };
+
   const closeNavigation = () => {
     console.log("did u call");
     document.body.style.overflow = "auto";
@@ -23,7 +49,7 @@ function Navbar({currentPath}) {
 
   return (
     <>
-      <nav className="nav d-flex align-items-center">
+      <nav className="nav d-flex align-items-center" ref={ref}>
         <div className="d-flex" style={{width: "100%"}}>
           <div className="nav__menu d-lg-flex justify-content-between align-items-center px-5">
             <div className="nav__item-left d-flex align-items-center">

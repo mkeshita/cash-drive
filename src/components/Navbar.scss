@@ -1,12 +1,20 @@
 $primary: #020249;
 $darkblue: #153e74;
 .nav {
-  height: 7.375rem;
+  height: 120px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 33;
+  z-index: 1000;
+  background-color: transparent;
+  transition: height 0.2s linear, background-color 0.2s linear;
+
+  &.sticky {
+    height: 80px;
+    position: sticky;
+    background-color: #fff;
+  }
 
   &__menu {
     width: 100%;
@@ -51,6 +59,7 @@ $darkblue: #153e74;
       &-links {
         height: 0;
         overflow: hidden;
+        background-color: #fff;
         transition: height 0.4s linear;
       }
       &-link-item {
@@ -120,7 +129,6 @@ $darkblue: #153e74;
     padding-right: 3.5rem;
     height: 30px;
     display: block;
-    margin-bottom: 1rem;
   }
 
   .btn {
@@ -145,6 +153,15 @@ $darkblue: #153e74;
         color: #153e74 !important;
         border: 1px solid #153e74 !important;
       }
+    }
+  }
+  &.sticky .btn {
+    color: white !important;
+    background: $darkblue !important;
+    &-outline {
+      background: white !important;
+      color: $darkblue !important;
+      border: 1px solid $darkblue !important;
     }
   }
 }
