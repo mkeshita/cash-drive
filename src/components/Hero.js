@@ -10,7 +10,7 @@ function Hero() {
     <div
       className="hero position-relative container-fluid"
       style={{
-        backgroundImage: `url('./images/hero-bg.png')`,
+        backgroundImage: `url('./images/Hero.png')`,
         backgroundPosition: "55% bottom",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -18,6 +18,9 @@ function Hero() {
     >
       {/* <img src="./images/hero-bg.jpg" className="hero__bg" /> */}
       <div className=" px-md-5 px-3 mx-0 mx-md-5">
+        <div className="col-md-6  d-md-none">
+          <AnimatedSvg />
+        </div>
         <div className="row align-items-center">
           <div className="col-md-6 mb-5">
             <Fade left duration={1500}>
