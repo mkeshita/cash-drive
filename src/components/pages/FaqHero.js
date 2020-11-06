@@ -30,7 +30,12 @@ function FaqHero() {
           <div className="col-md-4 mt-4">
             <div
               className="rounded"
-              style={{background: "#F6F7F8", padding: "2rem"}}
+              style={{
+                background: "#F6F7F8",
+                padding: "2rem",
+                position: "sticky",
+                top: "16px",
+              }}
             >
               <h5 className="border-bottom" style={{paddingBottom: "1.5rem"}}>
                 Need Assistance?
