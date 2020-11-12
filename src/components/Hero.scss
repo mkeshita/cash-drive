@@ -3,10 +3,10 @@ $darkblue: #153e74;
 
 .hero {
   //   background-image: url(./images/hero-bg.jpg);
-  padding: 10rem 0 5rem 0;
+  padding: 7rem 0 5rem 0;
 
   &__title {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: #4c473f;
     font-weight: 900;
     &__small {
@@ -28,8 +28,23 @@ $darkblue: #153e74;
   }
 }
 
-@media only screen and (max-width: 767px) {
-  // .hero {
-  //   background-position: -50% -50% !important;
-  // }
+.text-animation {
+  display: none;
+}
+
+@media only screen and (min-width: 922px) {
+  .hero__title {
+    font-size: 4.5rem;
+  }
+  .hero {
+    padding: 10rem 0 5rem 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .text-animation {
+    display: block;
+  }
+  .hero__resp {
+    display: none;
+  }
 }

@@ -57,7 +57,7 @@ function TextAnimation() {
   delay(3000, backspaceAnim);
 
   return (
-    <div>
+    <div className="text-animation">
       <h5 className="hero__title__small" style={{whiteSpace: "nowrap"}}>
         <span className="swap-text" ref={swapText}>
           Instant loan offers

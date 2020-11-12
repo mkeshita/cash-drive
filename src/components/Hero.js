@@ -25,7 +25,7 @@ function Hero() {
         <div className="row align-items-center">
           <div className="col-md-6 mb-5">
             <Fade left duration={1500}>
-              {/* <h5 className="hero__title__small">Quick loans</h5> */}
+              <h5 className="hero__title__small hero__resp">Quick loans</h5>
               <TextAnimation />
               <h2 className="hero__title">For Car Owners</h2>
 
