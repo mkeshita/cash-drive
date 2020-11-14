@@ -1,5 +1,5 @@
 import React from "react";
-import Strip from "./Strip";
+import Strip from "../Strip/Strip";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 

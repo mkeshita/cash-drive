@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Slider from "./Slider";
+import Slider from "../Slider";
 import "./Testimonial.scss";
 
 function Testimonial() {

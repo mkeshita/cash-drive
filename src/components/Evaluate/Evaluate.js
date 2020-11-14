@@ -1,5 +1,5 @@
 import React from "react";
-import LoanCalculator from "./LoanCalculator";
+import LoanCalculator from "../LoanCalculator";
 // import Tabs from "./Tabs";
 import Slide from "react-reveal/Slide";
 import Zoom from "react-reveal/Zoom";

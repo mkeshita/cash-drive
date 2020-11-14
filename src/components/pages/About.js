@@ -1,20 +1,18 @@
 import React from "react";
-import AboutHero from "../AboutHero";
-import Strip from "../Strip";
-import AboutSection from "../AboutSection";
-import AboutSectionTwo from "../AboutSectionTwo";
-import Testimonial from "../Testimonial";
+import AboutHero from "../About/AboutHero";
+import Strip from "../Strip/Strip";
+import AboutSection from "../About/AboutSection";
+import AboutSectionTwo from "../About/AboutSectionTwo";
+import Testimonial from "../Testimonial/Testimonial";
 
 function About() {
   return (
     <>
-      <about>
-        <AboutHero />
-        <AboutSection />
-        <AboutSectionTwo />
-        <Testimonial />
-        <Strip />
-      </about>
+      <AboutHero />
+      <AboutSection />
+      <AboutSectionTwo />
+      <Testimonial />
+      <Strip />
     </>
   );
 }

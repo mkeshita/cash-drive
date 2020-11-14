@@ -1,6 +1,6 @@
 import React from "react";
 import FaqItem from "./FaqItem";
-import data from "../data/faq.json";
+import data from "../../data/faq.json";
 import {NavLink} from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import "./Faq.scss";

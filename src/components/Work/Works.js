@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./Cards";
+import Cards from "../Card/Cards";
 import Fade from "react-reveal/Fade";
 
 function Works() {

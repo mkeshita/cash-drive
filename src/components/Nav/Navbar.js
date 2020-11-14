@@ -53,7 +53,6 @@ function Navbar({currentPath}) {
                 <NavLink
                   to="/about"
                   activeStyle={activeStyle}
-                  exact
                   className="nav__link"
                 >
                   About Us
@@ -61,23 +60,23 @@ function Navbar({currentPath}) {
 
                 <NavLink
                   to="/how-it-works"
-                  exact
                   activeStyle={activeStyle}
                   className="nav__link"
                 >
                   How it works
                 </NavLink>
 
-                {currentPath.pathname === "/" && (
-                  <a href="/#car-valuation" exact className="nav__link" id="">
-                    Car valuation
-                  </a>
-                )}
+                <NavLink
+                  to="/contact"
+                  activeStyle={activeStyle}
+                  className="nav__link"
+                >
+                  Contact Us
+                </NavLink>
 
                 <NavLink
                   to="/faq"
                   activeStyle={activeStyle}
-                  exact
                   className="nav__link"
                 >
                   FAQs
@@ -89,7 +88,7 @@ function Navbar({currentPath}) {
               <a href="#!" className="btn btn-outline btn-outline--blue mr-3">
                 Sign In
               </a>
-              <a href="#!" exact className="btn btn__blue text-white">
+              <a href="#!" className="btn btn__blue text-white">
                 Apply now
               </a>
             </div>
@@ -157,7 +156,6 @@ function Navbar({currentPath}) {
               <div>&nbsp;</div>
               <a
                 href="#!"
-                exact
                 className="btn btn-block btn__blue text-white"
                 style={{height: "50px", fontSize: "1.1rem", fontWeight: 600}}
                 onClick={closeNavigation}

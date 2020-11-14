@@ -134,3 +134,31 @@ ul {
     visibility: visible;
   }
 }
+
+.input {
+  border: 1px solid hsl(0, 0%, 80%);
+  min-height: 50px;
+  padding: 0 1.5rem;
+  width: 100%;
+  border-radius: 4px;
+
+  &__container {
+    margin-bottom: 1rem;
+  }
+  &:focus {
+    outline: none;
+    border: 2px solid #2684ff;
+  }
+}
+
+.textarea {
+  border: 1px solid hsl(0, 0%, 80%);
+  min-height: 50px;
+  padding: 0.8rem 1.5rem;
+  width: 100%;
+  border-radius: 4px;
+  &:focus {
+    outline: none;
+    border: 2px solid #2684ff;
+  }
+}

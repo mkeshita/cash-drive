@@ -1,7 +1,7 @@
 import React from "react";
-import FaqItem from "../FaqItem";
+import FaqItem from "./FaqItem";
 import data from "../../data/faq.json";
-import Strip from "../Strip";
+import Strip from "../Strip/Strip";
 
 function FaqHero() {
   const styles = {

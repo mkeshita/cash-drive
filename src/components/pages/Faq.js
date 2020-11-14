@@ -1,5 +1,5 @@
 import React from "react";
-import FaqHero from "./FaqHero";
+import FaqHero from "../Faq/FaqHero";
 
 function Faq() {
   return <FaqHero />;

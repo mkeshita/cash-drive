@@ -1,5 +1,5 @@
 import React from "react";
-import ExItem from "./ExItem";
+import ExItem from "../Ex/ExItem";
 
 function AboutSectionTwo() {
   const data = [

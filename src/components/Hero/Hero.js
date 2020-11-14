@@ -1,10 +1,9 @@
 import React from "react";
 import "./Hero.scss";
-import "./HeroForm";
 import HeroForm from "./HeroForm";
 import Fade from "react-reveal/Fade";
-import AnimatedSvg from "./AnimatedSvg";
-import TextAnimation from "./TextAnimation";
+import AnimatedSvg from "../AnimatedSvg";
+import TextAnimation from "../TextAnimation";
 
 function Hero() {
   return (

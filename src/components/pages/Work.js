@@ -1,7 +1,7 @@
 import React from "react";
-import WorkHero from "../WorkHero";
-import WorkBody from "../WorkBody";
-import "../Work.scss";
+import WorkHero from "../Work/WorkHero";
+import WorkBody from "../Work/WorkBody";
+import "../Work/Work.scss";
 
 function Work() {
   return (
