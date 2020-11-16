@@ -120,6 +120,9 @@ $darkblue: #153e74;
     text-decoration: none;
     color: $primary;
     font-weight: 500;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
     &:hover {
       text-decoration: none;
     }
@@ -162,6 +165,35 @@ $darkblue: #153e74;
       background: white !important;
       color: $darkblue !important;
       border: 1px solid $darkblue !important;
+    }
+  }
+  &__dropdown {
+    background: white;
+    left: 0;
+    min-width: 150px;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    display: none;
+    padding: 0 1rem;
+    top: 90%;
+    &__link {
+      height: 55px;
+      color: #020249;
+      padding: 1rem 1.5rem 1rem 0;
+      display: flex;
+      align-items: center;
+      text-decoration: none !important;
+    }
+  }
+
+  &__has-dropdown:hover {
+    .nav__dropdown {
+      display: block;
+    }
+    svg {
+      path {
+        stroke: $darkblue;
+      }
     }
   }
 }

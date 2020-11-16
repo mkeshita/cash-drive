@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import {NavLink} from "react-router-dom";
 import "./Navbar.scss";
+import Fade from "react-reveal/Fade";
 
 function Navbar({currentPath}) {
   const ref = useRef(null);
@@ -50,13 +51,44 @@ function Navbar({currentPath}) {
                 <img src="./images/logo.png" className="nav__logo" alt="logo" />
               </NavLink>
               <div>
-                <NavLink
-                  to="/about"
-                  activeStyle={activeStyle}
-                  className="nav__link"
+                <span
+                  style={{cursor: "pointer"}}
+                  className="nav__link position-relative nav__has-dropdown"
                 >
-                  About Us
-                </NavLink>
+                  Meet Cashdrive &nbsp;
+                  <svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.598877 1.41473L6.59888 7.41473L12.5989 1.41473"
+                      stroke=" #020249"
+                      strokeLinecap="round"
+                      strokeinejoin="round"
+                    />
+                  </svg>
+                  <Fade bottom distance="40%" duration={300}>
+                    <div className="position-absolute nav__dropdown shadow">
+                      <NavLink
+                        activeStyle={activeStyle}
+                        className="nav__dropdown__link border-bottom"
+                        to="/about"
+                      >
+                        About Us
+                      </NavLink>
+                      <NavLink
+                        activeStyle={activeStyle}
+                        className="nav__dropdown__link"
+                        to="/our-people"
+                      >
+                        Our People
+                      </NavLink>
+                    </div>
+                  </Fade>
+                </span>
 
                 <NavLink
                   to="/how-it-works"

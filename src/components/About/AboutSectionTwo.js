@@ -1,5 +1,6 @@
 import React from "react";
 import ExItem from "../Ex/ExItem";
+import Zoom from "react-reveal/Zoom";
 
 function AboutSectionTwo() {
   const data = [
@@ -8,12 +9,14 @@ function AboutSectionTwo() {
       content: "For your medical bills and emergencies.",
       icon: "./images/megaphone.svg",
       color: "#DBF8EE",
+      id: "5225",
     },
     {
       title: "Home Improvement",
       content: "Interior decor, New house or just general home improvements..",
       icon: "./images/home.svg",
       color: "#FFE2E4",
+      id: "8685",
     },
     {
       title: "Business",
@@ -21,12 +24,14 @@ function AboutSectionTwo() {
         "Starting a new business, or you just want to invest in an idea.",
       icon: "./images/suitcase.svg",
       color: "#E2EBFF",
+      id: "5585",
     },
     {
       title: "Holiday",
       content: "Planning a get away trip, we're on your side..",
       icon: "./images/plane.svg",
       color: "#DBF8EE",
+      id: "5511",
     },
   ];
   return (
@@ -39,16 +44,18 @@ function AboutSectionTwo() {
             <br />
             <div className="row">
               {data.map((data) => (
-                <ExItem data={data} />
+                <ExItem key={data.id} data={data} />
               ))}
             </div>
           </div>
           <div className="col-md-6">
-            <img
-              src="./images/about-img.jpg"
-              alt="about"
-              style={{width: "100%", borderRadius: "12px"}}
-            />
+            <Zoom>
+              <img
+                src="./images/about-img.jpg"
+                alt="about"
+                style={{width: "100%", borderRadius: "12px"}}
+              />
+            </Zoom>
           </div>
         </div>
       </div>

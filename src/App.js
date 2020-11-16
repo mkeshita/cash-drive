@@ -5,6 +5,7 @@ import About from "./components/pages/About";
 import Faq from "./components/pages/Faq";
 import Footer from "./components/Footer/Footer";
 import Work from "./components/pages/Work";
+import OurPeople from "./components/pages/OurPeople";
 import Contact from "./components/pages/Contact";
 import "./App.scss";
 
@@ -15,6 +16,7 @@ function App() {
       <Navbar currentPath={location} />
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/our-people" component={OurPeople} />
       <Route path="/contact" component={Contact} />
       <Route path="/faq" component={Faq} />
       <Route path="/how-it-works" component={Work} />
