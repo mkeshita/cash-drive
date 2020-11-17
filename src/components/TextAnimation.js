@@ -3,6 +3,7 @@ import React, {useRef} from "react";
 function TextAnimation() {
   const swapText = useRef(null);
   const changingText = [
+    "Quick loans",
     "Instant loan offers",
     "Borrow up to 50M",
     "Same day disbursements",
@@ -60,7 +61,7 @@ function TextAnimation() {
     <div className="text-animation">
       <h5 className="hero__title__small" style={{whiteSpace: "nowrap"}}>
         <span className="swap-text" ref={swapText}>
-          Instant loan offers
+          Quick loans
         </span>
         <span style={{fontWeight: 300}} className="blink">
           |

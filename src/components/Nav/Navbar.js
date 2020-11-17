@@ -156,19 +156,19 @@ function Navbar({currentPath}) {
                 About us
               </NavLink>
               <NavLink
-                to="/how-it-works"
+                to="/contact"
                 className="nav__menu-mobile-link-item d-flex align-items-center justify-content-center"
                 onClick={closeNavigation}
               >
-                How it works
+                Contact Us
               </NavLink>
-              <a
-                href="/#car-valuation"
+              <NavLink
+                to="/our-people"
                 className="nav__menu-mobile-link-item d-flex align-items-center justify-content-center"
                 onClick={closeNavigation}
               >
-                Car valuation
-              </a>
+                Our People
+              </NavLink>
               <NavLink
                 to="/faq"
                 className="nav__menu-mobile-link-item d-flex align-items-center justify-content-center"

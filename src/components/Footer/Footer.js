@@ -89,7 +89,7 @@ function Footer() {
       <img
         src="./images/footer__bg.png"
         className=""
-        style={{marginTop: "3rem", width: "100%"}}
+        style={{marginTop: "0rem", width: "100%"}}
         alt="background"
       />
     </footer>

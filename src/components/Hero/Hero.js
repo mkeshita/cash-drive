@@ -23,16 +23,20 @@ function Hero() {
         </div>
         <div className="row align-items-center">
           <div className="col-md-6 mb-5">
-            <Fade left duration={1500}>
-              <h5 className="hero__title__small hero__resp">Quick loans</h5>
-              <TextAnimation />
-              <h2 className="hero__title">For Car Owners</h2>
+            <h5 className="hero__title__small hero__resp">Quick loans</h5>
 
+            <Fade left duration={1500} delay={300}>
+              <TextAnimation />
+            </Fade>
+            <Fade left duration={1500} delay={600}>
+              <h2 className="hero__title">For Car Owners</h2>
+            </Fade>
+            <Fade bottom duration={1500} delay={600}>
               <p className="hero__lead-text">
                 Using your car as collateral and still drive it
               </p>
-              <HeroForm />
             </Fade>
+            <HeroForm />
           </div>
           <div className="col-md-6 d-none d-md-block">
             <AnimatedSvg />
