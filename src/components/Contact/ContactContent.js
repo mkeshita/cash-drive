@@ -10,7 +10,7 @@ function ContactContent() {
     },
     {
       icon: "./images/smartphone.svg",
-      content: "+234 817 555 6789, ",
+      content: "+234 817 555 6789, +234 802 857 2566, +234 703 491 2176 ",
       id: "02",
     },
     {

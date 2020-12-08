@@ -1,0 +1,15 @@
+.custom-input {
+  height: 50px;
+  width: 99%;
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 0 1rem;
+  &:hover,
+  &:focus {
+    border-color: #2684ff;
+    outline: none;
+    box-shadow: 0 0 0 1px #2684ff;
+  }
+}

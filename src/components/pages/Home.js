@@ -7,6 +7,7 @@ import ExSec from "../Ex/ExSec";
 import Testimonial from "../Testimonial/Testimonial";
 import Faq from "../Faq/Faq";
 import Strip from "../Strip/Strip";
+import Modal from "../Modal/Modal";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <Faq />
       <Testimonial />
       <Strip />
+      <Modal />
     </>
   );
 }
