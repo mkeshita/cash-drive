@@ -1,15 +1,15 @@
-import React from "react";
-import "./Input.scss";
+import React from 'react';
+import './Input.scss';
 
-function Input({value, handlechange}) {
+function Input({value, type, placeholder, handlechange}) {
   return (
     <>
       <input
-        type="text"
-        className="custom-input"
+        type={type || 'text'}
+        className='custom-input'
         value={value}
         onChange={(e) => handlechange(e)}
-        placeholder="Enter Amount..."
+        placeholder={placeholder || 'Enter Amount...'}
       />
     </>
   );
