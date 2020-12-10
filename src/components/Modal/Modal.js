@@ -5,11 +5,10 @@ import './Modal.scss';
 import vehicles from '../../utils/vehicles.json';
 import nigerianStates from '../../utils/states.json';
 import Input from '../Input/Input';
+import Mixin from '../../utils/mixin';
 
 const vehicleDetails = vehicles[0].selections.years;
-function Modal({submitVehicle}) {
-  const [modalOpen, setModalOpen] = useState(true);
-
+function Modal({submitVehicle, closeModal}) {
   const [
     {
       year,
@@ -25,15 +24,13 @@ function Modal({submitVehicle}) {
     setVehicle,
   ] = useState({});
 
+  const [terms, setTerms] = useState(false);
+
   const [{makes, models, trims}, setTypes] = useState({
     makes: [],
     models: [],
     trims: [],
   });
-
-  function handleClick() {
-    setModalOpen((prev) => !prev);
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,12 +43,16 @@ function Modal({submitVehicle}) {
       ? 'Please select the model of your car'
       : !trim
       ? 'Please select the body style of your car'
+      : !plate_number || !Mixin.validatePlateNumber(plate_number)
+      ? 'Please enter a valid plate number'
       : !insurance
       ? 'Please select the type of insurance on your car'
       : !registered_owner
       ? 'Please select the answer to the question: Are you the registered owner?'
       : !state
       ? 'Please select the state your vehicle was registered'
+      : !terms
+      ? 'Please agree to the Terms & Conditions'
       : '';
 
     setVehicle((key) => ({...key, error}));
@@ -113,7 +114,7 @@ function Modal({submitVehicle}) {
   }, [model, make, year]);
 
   return (
-    <div className={modalOpen ? 'Modal Modal--open' : 'Modal'}>
+    <div className='Modal Modal--open'>
       <Slide top duration={1500} delay={300}>
         <div className='Modal__content bg-white round'>
           <h3
@@ -128,8 +129,9 @@ function Modal({submitVehicle}) {
           >
             Tell us about your car
             <span
-              style={{fontWeight: '300', fontSize: '2rem'}}
-              onClick={handleClick}
+              className='cursor'
+              style={{fontWeight: '300', fontSize: '2rem', cursor: 'pointer'}}
+              onClick={() => closeModal}
             >
               x
             </span>
@@ -271,6 +273,7 @@ function Modal({submitVehicle}) {
                   type='checkbox'
                   className='form-check-input'
                   id='exampleCheck1'
+                  onChange={(e) => setTerms(!terms)}
                 />
                 <label className='form-check-label' htmlFor='exampleCheck1'>
                   I agree to the following Terms &amp; Conditions, Privacy
