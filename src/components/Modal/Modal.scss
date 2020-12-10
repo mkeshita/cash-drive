@@ -14,5 +14,26 @@
   &__content {
     max-width: 800px;
     margin: 3% auto;
+    border-radius: 5px;
+  }
+
+  &__title {
+    font-size: 2rem !important;
+  }
+
+  table td {
+    width: 50%;
+  }
+
+  table td.bold {
+    font-weight: 500;
+  }
+
+  .btn-grey {
+    background-color: #dee2e6;
+  }
+
+  .btn {
+    height: 40px;
   }
 }
