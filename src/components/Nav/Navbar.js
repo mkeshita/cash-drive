@@ -35,7 +35,6 @@ function Navbar({currentPath}) {
   };
 
   const closeNavigation = () => {
-    console.log("did u call");
     document.body.style.overflow = "auto";
     window.scrollTo(0, 0);
     setshowNav(false);
