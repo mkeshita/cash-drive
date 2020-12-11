@@ -12,8 +12,8 @@ function Check() {
       <path
         d="M16.5989 1.20081L5.59888 12.2008L0.598877 7.20081"
         stroke="#1A1A1A"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

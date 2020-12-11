@@ -43,7 +43,7 @@ function Modal() {
             </span>
           </h3>
           <div className="px-3 py-4">
-            <table class="table table-striped table-bordered">
+            <table className="table table-striped table-bordered">
               <tbody>
                 <tr>
                   <td className="bold">Year</td>
@@ -157,10 +157,10 @@ function Modal() {
               <div className="col-12 my-3 ml-4">
                 <input
                   type="checkbox"
-                  class="form-check-input"
+                  className="form-check-input"
                   id="exampleCheck1"
                 />
-                <label class="form-check-label" for="exampleCheck1">
+                <label className="form-check-label" htmlFor="exampleCheck1">
                   I agree to the following Terms &amp; Conditions, Privacy
                   Policy, Electronic Disclosure
                 </label>
@@ -170,7 +170,7 @@ function Modal() {
             <div>
               <a
                 href="#!"
-                class="btn btn-block btn-orange shadow"
+                className="btn btn-block btn-orange shadow"
                 style={{
                   display: "flex",
                   alignItems: "center",
