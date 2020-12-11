@@ -5,15 +5,27 @@ import Fade from 'react-reveal/Fade';
 import AnimatedSvg from '../AnimatedSvg';
 import TextAnimation from '../TextAnimation';
 import Modal from '../Modal/Modal';
+import Loader from '../Loader/Loader';
+import Api from '../../utils/api';
 
 function Hero() {
-  const [showModal, setModal] = React.useState(true);
+  const [showModal, setModal] = React.useState(false);
+  const [showLoader, setLoader] = React.useState(false);
   const [loan_details, setLoan] = React.useState({});
 
   const getLoanDetails = (data) => {
-    console.log(data);
     setLoan({...loan_details, ...data});
     setModal(true);
+  };
+
+  const estimateLoan = async (data) => {
+    setLoader(true);
+    const response = await Api.post(`${Api.ENDPOINTS.url}/estimate`, data);
+    const {status} = response;
+    if (status) {
+      window.location.href = `http://localhost:3000/register?token=${response.token}`;
+    }
+    setLoader(false);
   };
 
   return (
@@ -26,6 +38,8 @@ function Hero() {
         backgroundRepeat: 'no-repeat',
       }}
     >
+      {showLoader && <Loader />}
+
       {/* <img src="./images/hero-bg.jpg" className="hero__bg" /> */}
       <div className=' px-md-5 px-3 mx-0 mx-md-5'>
         <div className='col-md-6  d-md-none'>
@@ -53,7 +67,15 @@ function Hero() {
           </div>
         </div>
       </div>
-      {showModal && <Modal />}
+      {showModal && (
+        <Modal
+          closeModal={() => console.log('ee')}
+          submitVehicle={(data) => {
+            getLoanDetails(data);
+            estimateLoan({...data, ...loan_details});
+          }}
+        />
+      )}
     </div>
   );
 }

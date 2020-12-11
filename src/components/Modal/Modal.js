@@ -1,30 +1,118 @@
-import React, {useState} from "react";
-import Select from "react-select";
-import Slide from "react-reveal/Slide";
-import "./Modal.scss";
+import React, {useState, useEffect} from 'react';
+import Select from 'react-select';
+import Slide from 'react-reveal/Slide';
+import './Modal.scss';
+import vehicles from '../../utils/vehicles.json';
+import nigerianStates from '../../utils/states.json';
+import Input from '../Input/Input';
+import Mixin from '../../utils/mixin';
 
-function Modal() {
-  const [modalOpen, setModalOpen] = useState(true);
-  const options = [
-    {value: "chocolate", label: "Chocolate"},
-    {value: "strawberry", label: "Strawberry"},
-    {value: "vanilla", label: "Vanilla"},
-  ];
+const vehicleDetails = vehicles[0].selections.years;
+function Modal({submitVehicle, closeModal}) {
+  const [
+    {
+      year,
+      make,
+      model,
+      trim,
+      insurance,
+      registered_owner,
+      state,
+      plate_number,
+      error,
+    },
+    setVehicle,
+  ] = useState({});
 
-  function handleClick() {
-    setModalOpen((prev) => !prev);
-  }
+  const [terms, setTerms] = useState(false);
+  const [showDetails, setDetails] = useState(false);
 
-  function handleSubmit() {}
+  const [{makes, models, trims}, setTypes] = useState({
+    makes: [],
+    models: [],
+    trims: [],
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const error = !year
+      ? 'Please select the year'
+      : !make
+      ? 'Please select the make of your car'
+      : !model
+      ? 'Please select the model of your car'
+      : !trim
+      ? 'Please select the body style of your car'
+      : !plate_number || !Mixin.validatePlateNumber(plate_number)
+      ? 'Please enter a valid plate number'
+      : !insurance
+      ? 'Please select the type of insurance on your car'
+      : !registered_owner
+      ? 'Please select the answer to the question: Are you the registered owner?'
+      : !state
+      ? 'Please select the state your vehicle was registered'
+      : !terms
+      ? 'Please agree to the Terms & Conditions'
+      : '';
+
+    setVehicle((key) => ({...key, error}));
+
+    if (!error.length) setDetails(true);
+  };
+
+  const mapNames = (arr) => (arr ? arr.map((key) => key.name) : []);
+
+  const formatSelectOptions = (arr) =>
+    arr ? arr.map((key) => ({label: key, value: key})) : [];
+
+  const states = formatSelectOptions(nigerianStates);
+
+  const years = formatSelectOptions(
+    vehicleDetails?.map((key) => key.id).filter((key) => key >= 1990)
+  );
+
+  useEffect(() => {
+    setTypes((key) => ({
+      ...key,
+      makes: formatSelectOptions(
+        mapNames(vehicleDetails.find((key) => key.id === year)?.makes)
+      ),
+    }));
+  }, [year]);
+
+  useEffect(() => {
+    const models = vehicleDetails
+      .find((key) => key.id === year)
+      ?.makes?.find((key) => key.name === make)?.models;
+
+    setTypes((key) => ({
+      ...key,
+      models: formatSelectOptions(mapNames(models)),
+    }));
+  }, [make, year]);
+
+  useEffect(() => {
+    const trims = vehicleDetails
+      .find((key) => key.id === year)
+      ?.makes?.find((key) => key.name === make)
+      ?.models?.find((key) => key.name === model)?.trims;
+
+    setTypes((key) => ({
+      ...key,
+      trims: formatSelectOptions(mapNames(trims)),
+    }));
+  }, [model, make, year]);
+
   return (
-    <div className={modalOpen ? "Modal Modal--open" : "Modal"}>
+    <div className='Modal Modal--open'>
       <Slide top duration={1500} delay={300}>
         <div
-          className="Modal__content bg-white round"
-          style={{maxWidth: "500px"}}
+          className='Modal__content bg-white round'
+          style={{display: showDetails ? 'block' : 'none', maxWidth: '500px'}}
         >
           <h3
-            className="
+            className='
             title 
             Modal__title
             py-3 
@@ -32,58 +120,82 @@ function Modal() {
             border-bottom 
             d-flex 
             align-items-center 
-            justify-content-between"
+            justify-content-between'
           >
             Is this your car?
-            <span
-              style={{fontWeight: "300", fontSize: "2rem"}}
-              onClick={handleClick}
-            >
-              <img src="./images/cancel.svg" width="16" alt="cancel" />
-            </span>
+            {/* <span style={{fontWeight: '300', fontSize: '2rem'}}>
+              <img src='./images/cancel.svg' width='16' alt='cancel' />
+            </span> */}
           </h3>
+<<<<<<< HEAD
           <div className="px-3 py-4">
             <table className="table table-striped table-bordered">
+=======
+          <div className='px-3 py-4'>
+            <table class='table table-striped table-bordered'>
+>>>>>>> c674c3297c0fa08d05ec51c2751f5a659513b643
               <tbody>
                 <tr>
-                  <td className="bold">Year</td>
-                  <td>2001</td>
+                  <td className='bold'>Year</td>
+                  <td>{year}</td>
                 </tr>
                 <tr>
-                  <td className="bold">Make</td>
-                  <td>Toyota</td>
+                  <td className='bold'>Make</td>
+                  <td>{make}</td>
                 </tr>
                 <tr>
-                  <td className="bold">Model</td>
-                  <td>Camry</td>
+                  <td className='bold'>Model</td>
+                  <td>{model}</td>
                 </tr>
                 <tr>
-                  <td className="bold">Body Style</td>
-                  <td>LE</td>
+                  <td className='bold'>Body Style</td>
+                  <td>{trim}</td>
                 </tr>
                 <tr>
-                  <td className="bold">Insurance</td>
-                  <td>Third Party</td>
+                  <td className='bold'>Insurance</td>
+                  <td className='text-capitalize'>{insurance}</td>
                 </tr>
                 <tr>
-                  <td className="bold">Registered Owner</td>
-                  <td>Yes</td>
+                  <td className='bold'>Registered Owner</td>
+                  <td>{registered_owner === 1 ? 'Yes' : 'No'}</td>
                 </tr>
               </tbody>
             </table>
 
-            <div className="btn-container mt-5 d-flex justify-content-end">
-              <button className="btn btn-grey px-5">No</button>
-              <button className="btn btn-orange px-5 ml-3">Yes</button>
+            <div className='btn-container mt-5 d-flex justify-content-end'>
+              <button
+                className='btn btn-grey px-5'
+                onClick={() => setDetails(false)}
+              >
+                No
+              </button>
+              <button
+                className='btn btn-orange px-5 ml-3'
+                onClick={() =>
+                  submitVehicle({
+                    year,
+                    make,
+                    model,
+                    trim,
+                    insurance,
+                    registered_owner,
+                    state,
+                    plate_number,
+                  })
+                }
+              >
+                Yes
+              </button>
             </div>
           </div>
         </div>
+
         <div
-          className="Modal__content bg-white round"
-          style={{display: "none", maxWidth: "800px"}}
+          className='Modal__content bg-white round'
+          style={{display: !showDetails ? 'block' : 'none', maxWidth: '800px'}}
         >
           <h3
-            className="
+            className='
             title 
             title--small
             py-3 
@@ -91,76 +203,164 @@ function Modal() {
             border-bottom 
             d-flex 
             align-items-center 
-            justify-content-between"
+            justify-content-between'
           >
             Tell us about your car
             <span
-              style={{fontWeight: "300", fontSize: "2rem", cursor: "pointer"}}
-              onClick={handleClick}
+              className='cursor'
+              style={{fontWeight: '300', fontSize: '2rem', cursor: 'pointer'}}
+              onClick={() => closeModal}
             >
-              <img src="./images/cancel.svg" width="16" alt="cancel" />
+              <img src='./images/cancel.svg' width='16' alt='cancel' />
             </span>
           </h3>
 
-          <form className=" mb-5 p-4" onSubmit={handleSubmit}>
-            <div className="row">
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">What year is your car?</label>
-                <Select classNamePrefix="mySelect" options={options} />
+          <form className='mb-5 p-4' onSubmit={handleSubmit}>
+            {error && (
+              <p className='text-danger text-center font-weight-bold'>
+                {error}
+              </p>
+            )}
+
+            <div className='row'>
+              <div className='col-md-6 position-relative'>
+                <label className='select__label'>What year is your car?</label>
+                <Select
+                  classNamePrefix='mySelect'
+                  options={years}
+                  onChange={({value}) =>
+                    setVehicle((key) => ({
+                      ...key,
+                      year: value,
+                      make: null,
+                      model: null,
+                      trim: null,
+                    }))
+                  }
+                />
               </div>
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">What make is your car?</label>
-                <Select classNamePrefix="mySelect" options={options} />
+              <div className='col-md-6 position-relative'>
+                <label className='select__label'>What make is your car?</label>
+                <Select
+                  classNamePrefix='mySelect'
+                  options={makes}
+                  value={make ? undefined : make}
+                  onChange={({value}) =>
+                    setVehicle((key) => ({
+                      ...key,
+                      make: value,
+                      model: null,
+                      trim: null,
+                    }))
+                  }
+                />
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">What is your car model?</label>
-                <Select classNamePrefix="mySelect" options={options} />
+            <div className='row'>
+              <div className='col-md-6 mt-3 position-relative'>
+                <label className='select__label'>What is your car model?</label>
+                <Select
+                  classNamePrefix='mySelect'
+                  options={models}
+                  value={model ? undefined : model}
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, model: value, trim: null}))
+                  }
+                />
               </div>
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">
-                  Select your car's body size
+              <div className='col-md-6 mt-3 position-relative'>
+                <label className='select__label'>
+                  Select your car's body size.
                 </label>
-                <Select classNamePrefix="mySelect" options={options} />
+                <Select
+                  classNamePrefix='mySelect'
+                  options={trims}
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, trim: value}))
+                  }
+                  value={trim ? undefined : trim}
+                />
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">
+            <div className='row'>
+              <div className='col-md-6 mt-3 position-relative'>
+                <label className='select__label'>
                   Please type your plate number?
                 </label>
-                <Select classNamePrefix="mySelect" options={options} />
+                <Input
+                  value={plate_number}
+                  placeholder='Enter Plate Number'
+                  handlechange={(e) =>
+                    setVehicle((key) => ({
+                      ...key,
+                      plate_number: e.target.value,
+                    }))
+                  }
+                />
               </div>
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">
+              <div className='col-md-6 mt-3 position-relative'>
+                <label className='select__label'>
                   Select your car insurance type
-                </label>
-                <Select classNamePrefix="mySelect" options={options} />
+                </label>{' '}
+                <Select
+                  classNamePrefix='mySelect'
+                  options={[
+                    {label: 'Third Party', value: 'third party'},
+                    {label: 'Full', value: 'full'},
+                    {label: 'None', value: 'none'},
+                  ]}
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, insurance: value}))
+                  }
+                />
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">
+            <div className='row'>
+              <div className='col-md-6 mt-3 position-relative'>
+                <label className='select__label'>
                   Are you the registered owner?
                 </label>
-                <Select classNamePrefix="mySelect" options={options} />
+                <Select
+                  classNamePrefix='mySelect'
+                  options={[
+                    {value: 1, label: 'Yes'},
+                    {value: 2, label: 'No'},
+                  ]}
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, registered_owner: value}))
+                  }
+                />
               </div>
-              <div className="col-md-6 my-3 position-relative">
-                <label className="select__label">
+              <div className='col-md-6 mt-3 position-relative'>
+                <label className='select__label'>
                   State of vehicle registration
                 </label>
-                <Select classNamePrefix="mySelect" options={options} />
+                <Select
+                  classNamePrefix='mySelect'
+                  options={states}
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, state: value}))
+                  }
+                />
               </div>
             </div>
-            <div className="row">
-              <div className="col-12 my-3 ml-4">
+            <div className='row'>
+              <div className='col-12 my-3 ml-4'>
                 <input
+<<<<<<< HEAD
                   type="checkbox"
                   className="form-check-input"
                   id="exampleCheck1"
                 />
                 <label className="form-check-label" htmlFor="exampleCheck1">
+=======
+                  type='checkbox'
+                  className='form-check-input'
+                  id='exampleCheck1'
+                  onChange={(e) => setTerms(!terms)}
+                />
+                <label class='form-check-label' for='exampleCheck1'>
+>>>>>>> c674c3297c0fa08d05ec51c2751f5a659513b643
                   I agree to the following Terms &amp; Conditions, Privacy
                   Policy, Electronic Disclosure
                 </label>
@@ -168,18 +368,24 @@ function Modal() {
             </div>
 
             <div>
+<<<<<<< HEAD
               <a
                 href="#!"
                 className="btn btn-block btn-orange shadow"
+=======
+              <button
+                type='submit'
+                class='btn btn-block btn-orange shadow'
+>>>>>>> c674c3297c0fa08d05ec51c2751f5a659513b643
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: "600",
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: '600',
                 }}
               >
                 Apply now
-              </a>
+              </button>
             </div>
           </form>
         </div>

@@ -40,7 +40,7 @@ class Api {
         },
       });
 
-      return res;
+      return res.data;
     } catch (err) {
       if (!err.response) return 'Network Error';
       return err.response.data;
@@ -58,7 +58,7 @@ class Api {
         },
       });
 
-      return res;
+      return res.data;
     } catch (err) {
       if (!err.response) return 'Network Error';
       return err.response.data;
@@ -75,7 +75,7 @@ class Api {
         },
       });
 
-      return res;
+      return res.data;
     } catch (err) {
       if (!err.response) return 'Network Error';
       return err.response.data;

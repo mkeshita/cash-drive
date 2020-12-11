@@ -62,7 +62,9 @@ function TextAnimation() {
   return (
     <div className="text-animation">
       <h5 className="hero__title__small" style={{whiteSpace: "nowrap"}}>
-        <span className="swap-text" ref={swapText}></span>
+        <span className="swap-text" ref={swapText}>
+          Quick loans
+        </span>
         <span style={{fontWeight: 300}} className="blink">
           |
         </span>
