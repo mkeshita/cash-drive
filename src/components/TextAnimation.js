@@ -7,7 +7,7 @@ function TextAnimation() {
     "Borrow up to 50M",
     "Same day disbursements",
   ];
-  let turn = 4;
+  let turn = 0;
 
   const swapText = useRef(null);
 
@@ -62,9 +62,7 @@ function TextAnimation() {
   return (
     <div className="text-animation">
       <h5 className="hero__title__small" style={{whiteSpace: "nowrap"}}>
-        <span className="swap-text" ref={swapText}>
-          Quick loans
-        </span>
+        <span className="swap-text" ref={swapText}></span>
         <span style={{fontWeight: 300}} className="blink">
           |
         </span>

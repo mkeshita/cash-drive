@@ -2,8 +2,8 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import "./Footer.scss";
 
-function Footer() {
-  return (
+function Footer({location}) {
+  return location === "/login" ? null : (
     <footer
       className="footer position-relative"
       style={{backgroundImage: `url(./images)`}}
