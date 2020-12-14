@@ -23,7 +23,7 @@ function LoginForm() {
           handlechange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <button class="btn px-5 mt-5 btn-orange">Sign In</button>
+      <button class="btn px-5 mt-5 btn-orange shadow">Sign In</button>
     </form>
   );
 }
