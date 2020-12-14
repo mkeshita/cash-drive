@@ -23,7 +23,8 @@ function Hero() {
     const response = await Api.post(`${Api.ENDPOINTS.url}/estimate`, data);
     const {status} = response;
     if (status) {
-      window.location.href = `http://localhost:3000/register?token=${response.token}`;
+      const encoded = btoa(JSON.stringify(response));
+      window.location.href = `http://localhost:3000/register?token=${encoded}`;
     }
     setLoader(false);
   };
