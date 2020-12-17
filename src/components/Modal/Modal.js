@@ -69,7 +69,10 @@ function Modal({submitVehicle, closeModal}) {
   const states = formatSelectOptions(nigerianStates);
 
   const years = formatSelectOptions(
-    vehicleDetails?.map((key) => key.id).filter((key) => key >= 1990)
+    vehicleDetails
+      ?.map((key) => key.id)
+      .filter((key) => key >= 1990)
+      .reverse()
   );
 
   useEffect(() => {
