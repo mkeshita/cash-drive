@@ -25,6 +25,7 @@ function Hero() {
     if (status) {
       const encoded = btoa(JSON.stringify(response));
       window.location.href = `https://cashdrive-app.netlify.app/register?token=${encoded}`;
+      return;
     }
     setLoader(false);
   };
