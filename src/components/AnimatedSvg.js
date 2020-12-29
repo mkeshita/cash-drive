@@ -2998,8 +2998,8 @@ function AnimatedSvg() {
             y2="79.9943"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="0.6752" stop-color="#505050" />
+            <stop stopColor="white" />
+            <stop offset="0.6752" stopColor="#505050" />
             <stop offset="1" />
           </linearGradient>
           <linearGradient
@@ -3010,9 +3010,9 @@ function AnimatedSvg() {
             y2="340.033"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFAB21" />
-            <stop offset="0.4175" stop-color="#F8A51C" />
-            <stop offset="1" stop-color="#E6930E" />
+            <stop stopColor="#FFAB21" />
+            <stop offset="0.4175" stopColor="#F8A51C" />
+            <stop offset="1" stopColor="#E6930E" />
           </linearGradient>
           <linearGradient
             id="paint2_linear"
@@ -3022,8 +3022,8 @@ function AnimatedSvg() {
             y2="367.504"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#E26511" />
-            <stop offset="1" stop-color="#E6930E" />
+            <stop stopColor="#E26511" />
+            <stop offset="1" stopColor="#E6930E" />
           </linearGradient>
           <linearGradient
             id="paint3_linear"
@@ -3033,12 +3033,12 @@ function AnimatedSvg() {
             y2="139.112"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#6460E6" />
-            <stop offset="0.3374" stop-color="#625EE3" />
-            <stop offset="0.5715" stop-color="#5D59DA" />
-            <stop offset="0.7743" stop-color="#534FCB" />
-            <stop offset="0.9583" stop-color="#4642B5" />
-            <stop offset="1" stop-color="#423EAF" />
+            <stop stopColor="#6460E6" />
+            <stop offset="0.3374" stopColor="#625EE3" />
+            <stop offset="0.5715" stopColor="#5D59DA" />
+            <stop offset="0.7743" stopColor="#534FCB" />
+            <stop offset="0.9583" stopColor="#4642B5" />
+            <stop offset="1" stopColor="#423EAF" />
           </linearGradient>
           <linearGradient
             id="paint4_linear"
@@ -3048,9 +3048,9 @@ function AnimatedSvg() {
             y2="96.3418"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#6460E6" />
-            <stop offset="0.5496" stop-color="#524ECA" />
-            <stop offset="1" stop-color="#423EAF" />
+            <stop stopColor="#6460E6" />
+            <stop offset="0.5496" stopColor="#524ECA" />
+            <stop offset="1" stopColor="#423EAF" />
           </linearGradient>
           <linearGradient
             id="paint5_linear"
@@ -3060,9 +3060,9 @@ function AnimatedSvg() {
             y2="176.316"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFB947" />
-            <stop offset="0.532" stop-color="#F3A62B" />
-            <stop offset="1" stop-color="#E6930E" />
+            <stop stopColor="#FFB947" />
+            <stop offset="0.532" stopColor="#F3A62B" />
+            <stop offset="1" stopColor="#E6930E" />
           </linearGradient>
           <linearGradient
             id="paint6_linear"
@@ -3072,8 +3072,8 @@ function AnimatedSvg() {
             y2="171.839"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFAB21" />
-            <stop offset="1" stop-color="#E6930E" />
+            <stop stopColor="#FFAB21" />
+            <stop offset="1" stopColor="#E6930E" />
           </linearGradient>
           <clipPath id="clip0">
             <rect width="459" height="465" fill="white" />

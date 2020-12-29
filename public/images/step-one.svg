@@ -275,16 +275,16 @@
 <path d="M2080.24 227.249L1967.02 114.039L1913.28 167.779L1910.3 164.799L1967.02 108.069L2083.22 224.269L2080.24 227.249Z" fill="url(#paint2_linear)"/>
 <defs>
 <linearGradient id="paint0_linear" x1="1089.78" y1="1546.33" x2="1089.78" y2="491.392" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF9F55"/>
-<stop offset="1" stop-color="#FFD255"/>
+<stop stopColor="#FF9F55"/>
+<stop offset="1" stopColor="#FFD255"/>
 </linearGradient>
 <linearGradient id="paint1_linear" x1="1369.92" y1="1074.31" x2="1369.92" y2="1190.69" gradientUnits="userSpaceOnUse">
-<stop stop-color="#026183"/>
-<stop offset="1" stop-color="#153E74"/>
+<stop stopColor="#026183"/>
+<stop offset="1" stopColor="#153E74"/>
 </linearGradient>
 <linearGradient id="paint2_linear" x1="1910.3" y1="167.659" x2="2083.22" y2="167.659" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF9F55"/>
-<stop offset="1" stop-color="#FFD255"/>
+<stop stopColor="#FF9F55"/>
+<stop offset="1" stopColor="#FFD255"/>
 </linearGradient>
 </defs>
 </svg>

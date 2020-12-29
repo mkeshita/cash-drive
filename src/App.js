@@ -8,6 +8,7 @@ import Work from "./components/pages/Work";
 import OurPeople from "./components/pages/OurPeople";
 import Contact from "./components/pages/Contact";
 import "./App.scss";
+import LoginPage from "./components/pages/LoginPage";
 
 function App() {
   const location = useLocation();
@@ -20,7 +21,8 @@ function App() {
       <Route path="/contact" component={Contact} />
       <Route path="/faq" component={Faq} />
       <Route path="/how-it-works" component={Work} />
-      <Footer />
+      <Route path="/login" component={LoginPage} />
+      <Footer location={location.pathname} />
     </>
   );
 }

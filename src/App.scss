@@ -47,6 +47,9 @@ p {
   font-size: 2.625rem;
   font-weight: 600;
   color: $darkblue;
+  &--smaller {
+    font-size: 1.5rem;
+  }
   &--small {
     font-weight: 500;
     color: $lightblue;

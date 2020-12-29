@@ -1,12 +1,12 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect} from "react";
 import {NavLink} from "react-router-dom";
 import "./Navbar.scss";
 import Fade from "react-reveal/Fade";
 
-function Navbar({currentPath}) {
-  const ref = useRef(null);
+function Navbar() {
   const activeStyle = {color: "#0056b3"};
   const [showNav, setshowNav] = useState(false);
+  const [sticky, setSticky] = useState(false);
 
   const handleClick = () => {
     if (!showNav) {
@@ -21,16 +21,16 @@ function Navbar({currentPath}) {
     window.addEventListener("scroll", (e) => handleNavigation(e));
 
     return () => {
-      window.addEventListener("scroll", (e) => handleNavigation(e));
+      window.removeEventListener("scroll", (e) => handleNavigation(e));
     };
   });
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
     if (window.scrollY > 200) {
-      ref.current.classList.add("sticky", "shadow");
+      setSticky(true);
     } else {
-      ref.current.classList.remove("sticky", "shadow");
+      setSticky(false);
     }
   };
 
@@ -42,7 +42,13 @@ function Navbar({currentPath}) {
 
   return (
     <>
-      <nav className="nav d-flex align-items-center" ref={ref}>
+      <nav
+        className={
+          sticky
+            ? "nav d-flex align-items-center sticky shadow"
+            : "nav d-flex align-items-center"
+        }
+      >
         <div className="d-flex" style={{width: "100%"}}>
           <div className="nav__menu d-lg-flex justify-content-between align-items-center px-5">
             <div className="nav__item-left d-flex align-items-center">
