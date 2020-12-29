@@ -41,7 +41,6 @@ function LoanCalculator() {
     setLoader(true);
     const response = await Api.post(`${Api.ENDPOINTS.url}/car-value`, data);
     const { status } = response;
-    console.log(response);
 
     if (status) {
       setVehicle((key) => ({ ...key, carValue: response.data }));
@@ -175,15 +174,15 @@ function LoanCalculator() {
           <tbody>
             <tr>
               <td className='bold'>Car Value</td>
-              <td>{Mixin.formatAmount(carValue.below)}</td>
+              <td>{Mixin.formatAmount(carValue?.below)}</td>
             </tr>
             <tr>
               <td className='bold'>Distress Sale Value</td>
-              <td>{Mixin.formatAmount(carValue.first_sale)}</td>
+              <td>{Mixin.formatAmount(carValue?.first_sale)}</td>
             </tr>
             <tr>
               <td className='bold'>How Much You Can Get</td>
-              <td>{Mixin.formatAmount(carValue.average)}</td>
+              <td>{Mixin.formatAmount(carValue?.average)}</td>
             </tr>
           </tbody>
         </table>
