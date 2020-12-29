@@ -7,7 +7,7 @@ function TextAnimation() {
     "Borrow up to 50M",
     "Same day disbursements",
   ];
-  let turn = 0;
+  let turn = 4;
 
   const swapText = useRef(null);
 
@@ -20,8 +20,8 @@ function TextAnimation() {
 
   // code to for back space animtion
   const backspaceAnim = () => {
-    let text = swapText.current.innerHTML.trim();
-    for (let x = 0; x <= text.length; x++) {
+    let text = swapText.current?.innerHTML.trim();
+    for (let x = 0; x <= text?.length; x++) {
       setTimeout(() => {
         swapText.current.innerHTML = text.trim().slice(0, text.length - x);
       }, 150 * x);
@@ -30,7 +30,7 @@ function TextAnimation() {
 
   // code to write text animation
   const writeAnim = () => {
-    if (swapText.current.innerHTML.trim().length === 0) {
+    if (swapText?.current.innerHTML.trim().length === 0) {
       setTurn();
       const text = changingText[turn];
       for (let i = 0; i < text.length; i++) {
