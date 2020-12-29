@@ -24,7 +24,8 @@ function Hero() {
     const {status} = response;
     if (status) {
       const encoded = btoa(JSON.stringify(response));
-      window.location.href = `http://localhost:3000/register?token=${encoded}`;
+      window.location.href = `https://cashdrive-app.netlify.app/register?token=${encoded}`;
+      return;
     }
     setLoader(false);
   };

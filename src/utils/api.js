@@ -6,7 +6,7 @@ import axios from 'axios';
  * @exports Api
  */
 
-const BASE_URL = 'http://52.177.172.188/api/v1';
+const BASE_URL = 'https://api.cashdrive.co/api/v1';
 
 class Api {
   static ENDPOINTS = {
