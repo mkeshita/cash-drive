@@ -1,5 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import {Link} from "react-router-dom";
 import "./Strip.scss";
 
 function Strip() {
@@ -25,7 +26,7 @@ function Strip() {
           <Fade bottom delay={1100}>
             <div className="text-left mt-5 mt-md-0 text-md-right position-relateive d-flex  flex-column">
               <a
-                href="#!"
+                href="/#hero"
                 className="btn btn-sm-inline-block text-center strip__btn bg-white px-5 mb-2 align-self-start align-self-md-end d-flex align-items-center"
               >
                 Get Offer
