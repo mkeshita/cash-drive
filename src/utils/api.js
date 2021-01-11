@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 /**
  * @class Api
@@ -6,7 +6,7 @@ import axios from 'axios';
  * @exports Api
  */
 
-const BASE_URL = 'https://api.cashdrive.co/api/v1';
+const BASE_URL = ", {useLayoutEffect}";
 
 class Api {
   static ENDPOINTS = {
@@ -32,7 +32,7 @@ class Api {
   static async post(url, data, token) {
     try {
       const res = await axios({
-        method: 'post',
+        method: "post",
         url,
         data,
         headers: {
@@ -42,7 +42,7 @@ class Api {
 
       return res.data;
     } catch (err) {
-      if (!err.response) return 'Network Error';
+      if (!err.response) return "Network Error";
       return err.response.data;
     }
   }
@@ -50,7 +50,7 @@ class Api {
   static async put(url, data, token) {
     try {
       const res = await axios({
-        method: 'put',
+        method: "put",
         url,
         data,
         headers: {
@@ -60,7 +60,7 @@ class Api {
 
       return res.data;
     } catch (err) {
-      if (!err.response) return 'Network Error';
+      if (!err.response) return "Network Error";
       return err.response.data;
     }
   }
@@ -68,7 +68,7 @@ class Api {
   static async get(url, token) {
     try {
       const res = await axios({
-        method: 'get',
+        method: "get",
         url,
         headers: {
           Authorization: `Bearer ${token}`,
@@ -77,7 +77,7 @@ class Api {
 
       return res.data;
     } catch (err) {
-      if (!err.response) return 'Network Error';
+      if (!err.response) return "Network Error";
       return err.response.data;
     }
   }

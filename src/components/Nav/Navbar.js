@@ -122,12 +122,15 @@ function Navbar() {
             </div>
 
             <div className="nav__item-right">
-              <a href="#!" className="btn btn-outline btn-outline--blue mr-3">
+              <NavLink
+                to="/"
+                className="btn btn-outline btn-outline--blue mr-3"
+              >
                 Sign In
-              </a>
-              <a href="#!" className="btn btn__blue text-white">
+              </NavLink>
+              <NavLink to="/" className="btn btn__blue text-white">
                 Apply now
-              </a>
+              </NavLink>
             </div>
           </div>
           <div

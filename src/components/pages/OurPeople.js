@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useLayoutEffect} from "react";
 import Culture from "../Ourpeople/Culture";
 import FirstSection from "../Ourpeople/FirstSec";
 import JoinUs from "../Ourpeople/JoinUs";
@@ -7,6 +7,9 @@ import OurPeopleHero from "../Ourpeople/OurPeopleHero";
 import Testimonial from "../Testimonial/Testimonial";
 
 function OurPeople() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <OurPeopleHero />
