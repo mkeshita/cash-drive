@@ -122,12 +122,12 @@ function Navbar() {
             </div>
 
             <div className="nav__item-right">
-              <NavLink
-                to="/"
+              <a
+                href="https://hungry-tereshkova-fb7d14.netlify.app/login"
                 className="btn btn-outline btn-outline--blue mr-3"
               >
                 Sign In
-              </NavLink>
+              </a>
               <NavLink to="/" className="btn btn__blue text-white">
                 Apply now
               </NavLink>
@@ -186,7 +186,7 @@ function Navbar() {
               </NavLink>
               <div>&nbsp;</div>
               <a
-                href="#!"
+                href="https://hungry-tereshkova-fb7d14.netlify.app/login"
                 className="btn btn-block btn-outline btn-outline--blue mr-3"
                 style={{height: "50px", fontSize: "1.1rem", fontWeight: 600}}
                 onClick={closeNavigation}
