@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import Fade from 'react-reveal/Fade';
-import vehicles from '../utils/vehicles.json';
-import Select from 'react-select';
-import Api from '../utils/api';
-import Mixin from '../utils/mixin';
+import React, {useState, useEffect} from "react";
+import Fade from "react-reveal/Fade";
+import vehicles from "../utils/vehicles.json";
+import Select from "react-select";
+import Api from "../utils/api";
+import Mixin from "../utils/mixin";
 
 const vehicleDetails = vehicles[0].selections.years;
 
@@ -23,14 +23,14 @@ function LoanCalculator() {
     e.preventDefault();
 
     const error = !year
-      ? 'Please select the year'
+      ? "Please select the year"
       : !make
-      ? 'Please select the make of your car'
+      ? "Please select the make of your car"
       : !model
-      ? 'Please select the model of your car'
+      ? "Please select the model of your car"
       : !trim
-      ? 'Please select the body style of your car'
-      : '';
+      ? "Please select the body style of your car"
+      : "";
 
     setVehicle((key) => ({...key, error}));
 
@@ -101,17 +101,17 @@ function LoanCalculator() {
   }, [model, make, year]);
 
   const Form = (
-    <form className='form-restrict position-relative' onSubmit={handleSubmit}>
+    <form className="form-restrict position-relative" onSubmit={handleSubmit}>
       {error && (
-        <p className='text-danger text-center font-weight-bold'>{error}</p>
+        <p className="text-danger text-center font-weight-bold">{error}</p>
       )}
 
       <Fade bottom cascade>
-        <div className='position-relative'>
+        <div className="position-relative">
           <Select
-            classNamePrefix='mySelect'
+            classNamePrefix="mySelect"
             options={years}
-            placeholder={'Year'}
+            placeholder={"Year"}
             onChange={({value}) =>
               setVehicle((key) => ({
                 ...key,
@@ -123,12 +123,12 @@ function LoanCalculator() {
             }
           />
         </div>
-        <div className='position-relative mt-4'>
+        <div className="position-relative mt-4">
           <Select
-            classNamePrefix='mySelect'
+            classNamePrefix="mySelect"
             options={makes}
             value={make ? undefined : make}
-            placeholder={'Make'}
+            placeholder={"Make"}
             onChange={({value}) =>
               setVehicle((key) => ({
                 ...key,
@@ -139,10 +139,10 @@ function LoanCalculator() {
             }
           />
         </div>
-        <div className='position-relative mt-4'>
+        <div className="position-relative mt-4">
           <Select
-            placeholder={'Model'}
-            classNamePrefix='mySelect'
+            placeholder={"Model"}
+            classNamePrefix="mySelect"
             options={models}
             value={model ? undefined : model}
             onChange={({value}) =>
@@ -150,10 +150,10 @@ function LoanCalculator() {
             }
           />
         </div>
-        <div className='position-relative mt-4'>
+        <div className="position-relative mt-4">
           <Select
-            classNamePrefix='mySelect'
-            placeholder={'Body Style'}
+            classNamePrefix="mySelect"
+            placeholder={"Body Style"}
             options={trims}
             onChange={({value}) => setVehicle((key) => ({...key, trim: value}))}
             value={trim ? undefined : trim}
@@ -161,8 +161,8 @@ function LoanCalculator() {
         </div>
       </Fade>
 
-      <button type='submit' className='btn px-5 mt-5 btn-orange'>
-        {showLoader ? 'Evaluating...' : 'Get Offer'}
+      <button type="submit" className="btn px-5 mt-5 btn-orange">
+        {showLoader ? "Evaluating..." : "Get Offer"}
       </button>
     </form>
   );
@@ -170,34 +170,34 @@ function LoanCalculator() {
   const Result = (
     <div>
       <p
-        className='px-4 d-flex align-items-center justify-content-between'
-        style={{color: '#e26511'}}
+        className="px-4 d-flex align-items-center justify-content-between"
+        style={{color: "#e26511"}}
       >
         Please note that your car value might vary from the figures above, based
         on the mileage and age of the car.
       </p>
-      <div className='px-3 py-4'>
-        <table class='table table-striped table-bordered'>
+      <div className="px-3 py-4">
+        <table class="table table-striped table-bordered">
           <tbody>
             <tr>
-              <td className='bold'>Car Value</td>
+              <td className="bold">Car Value</td>
               <td>{Mixin.formatAmount(carValue?.below)}</td>
             </tr>
             <tr>
-              <td className='bold'>Distress Sale Value</td>
+              <td className="bold">Distress Sale Value</td>
               <td>{Mixin.formatAmount(carValue?.first_sale)}</td>
             </tr>
-            <tr>
+            {/* <tr>
               <td className='bold'>How Much You Can Get</td>
               <td>{Mixin.formatAmount(carValue?.amount_to_borrow)}</td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
 
-        <div className='text-center'>
+        <div className="text-center">
           <button
             onClick={() => setDetails(false)}
-            className='btn px-5 mt-3 btn-orange'
+            className="btn px-5 mt-3 btn-orange"
           >
             Try Again
           </button>
