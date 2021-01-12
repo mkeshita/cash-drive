@@ -132,7 +132,7 @@ function Navbar() {
                 href="https://hungry-tereshkova-fb7d14.netlify.app/register"
                 className="btn btn__blue text-white"
               >
-                Apply now
+                Sign Up
               </a>
             </div>
           </div>
