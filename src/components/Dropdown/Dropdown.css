@@ -1,0 +1,86 @@
+.c-dropdown {
+  max-width: 500px;
+  border: 5px;
+  height: 50px;
+  z-index: 6;
+}
+
+.c-dropdown .control {
+  max-width: 500px;
+  border: 5px;
+  height: 50px;
+  z-index: 6;
+  background: #ffffff;
+  border: 1px solid rgba(102, 102, 102, 0.24);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1.2rem;
+  font-size: 1rem;
+  color: #999;
+}
+
+.c-dropdown .control:focus {
+  -webkit-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.21);
+  outline: none;
+  border: 1px solid #6979f8;
+}
+
+.c-dropdown .control .selected-value {
+  width: 100%;
+}
+
+.c-dropdown .options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  -webkit-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.21);
+  border-radius: 5px;
+  overflow-y: auto;
+  background: #fff;
+  max-height: 250px;
+  z-index: 797;
+  top: 55px;
+  left: 0;
+}
+
+.c-dropdown .options .selected {
+  background: #e8f1ff;
+}
+
+.c-dropdown .options.open {
+  display: block;
+}
+
+.c-dropdown .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1.2rem;
+  height: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.c-dropdown .option:hover {
+  background: #deebff;
+}
+
+.c-dropdown .option:last-child {
+  border-bottom: 0;
+}
+/*# sourceMappingURL=Dropdown.css.map */

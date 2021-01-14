@@ -1,0 +1,20 @@
+.strip {
+  padding: 3rem 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#026183), to(#153e74));
+  background: linear-gradient(180deg, #026183 0%, #153e74 100%);
+  border-radius: 43px;
+  margin: 2rem 0 6rem 0;
+}
+
+.strip .strip__btn {
+  background: #fff;
+  max-width: 220px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 767px) {
+  .strip {
+    padding: 4rem 5rem;
+  }
+}
+/*# sourceMappingURL=Strip.css.map */

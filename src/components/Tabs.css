@@ -1,0 +1,18 @@
+.tabs__inner {
+  cursor: pointer;
+}
+
+.tabs__inner span {
+  color: #999;
+  display: block;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.tabs__inner.active span {
+  color: #020249;
+  border-bottom: 2px solid #fe9e00;
+  font-weight: 500;
+}
+/*# sourceMappingURL=Tabs.css.map */

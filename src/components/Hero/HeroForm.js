@@ -26,7 +26,6 @@ function HeroForm({showModal}) {
     {value: 2, label: "Bi Monthly (Every 2 months)"},
     {value: 3, label: "Quarterly"},
   ];
-  //   return <Select options={options} />;
 
   const months = Array.from({length: 12}, (_, i) => ({
     label: `${i + 1} month${i ? "s" : ""}`,

@@ -1,0 +1,57 @@
+.hero {
+  padding: 7rem 0 5rem 0;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  color: #4c473f;
+  font-weight: 900;
+}
+
+.hero__title__small {
+  color: #e26511;
+  font-size: 3.8rem;
+  font-weight: 600;
+}
+
+.hero__lead-text {
+  font-size: 1 19rem;
+}
+
+.hero__faq {
+  padding-top: 8rem;
+  padding-bottom: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eaf5ff;
+}
+
+.text-animation {
+  display: none;
+}
+
+@media only screen and (min-width: 922px) {
+  .hero__title {
+    font-size: 4.5rem;
+  }
+  .hero {
+    padding: 10rem 0 5rem 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .text-animation {
+    display: block;
+  }
+  .hero__resp {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Hero.css.map */

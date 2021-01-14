@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,WAAW,EAAE,KAAK;EAClB,cAAc,EAAE,IAAI;EACpB,UAAU,EAAE,OAAO;CACpB",
+    "sources": [
+        "AboutHero.scss"
+    ],
+    "names": [],
+    "file": "AboutHero.css"
+}

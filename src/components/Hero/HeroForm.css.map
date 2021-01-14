@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,UAAU,EAAE,eAAe;EAC3B,YAAY,EAAE,MAAM;CACrB;;AAED,AAAA,cAAc,CAAC;EACb,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,GAAG;CACjB",
+    "sources": [
+        "HeroForm.scss"
+    ],
+    "names": [],
+    "file": "HeroForm.css"
+}

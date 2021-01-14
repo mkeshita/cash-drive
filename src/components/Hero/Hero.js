@@ -12,6 +12,7 @@ function Hero() {
   const [showModal, setModal] = React.useState(false);
   const [showLoader, setLoader] = React.useState(false);
   const [loan_details, setLoan] = React.useState({});
+  const [offer, setOffer] = React.useState({});
 
   const getLoanDetails = (data) => {
     setLoan({...loan_details, ...data});
@@ -20,13 +21,20 @@ function Hero() {
 
   const estimateLoan = async (data) => {
     setLoader(true);
-    const response = await Api.post(`${Api.ENDPOINTS.url}/estimate`, data);
-    const {status} = response;
+    const {status} = offer;
     if (status) {
-      const encoded = btoa(JSON.stringify(response));
+      const encoded = btoa(JSON.stringify(offer));
       window.location.href = `https://cashdrive-app.netlify.app/register?token=${encoded}`;
       return;
     }
+    setLoader(false);
+  };
+
+  const getOfferOnly = async (data) => {
+    setLoader(true);
+    const response = await Api.post(`${Api.ENDPOINTS.url}/estimate`, data);
+    setOffer({...response});
+    console.log(offer);
     setLoader(false);
   };
 
@@ -76,6 +84,11 @@ function Hero() {
           submitVehicle={(data) => {
             getLoanDetails(data);
             estimateLoan({...data, ...loan_details});
+          }}
+          offer={offer}
+          getOffer={(data) => {
+            getLoanDetails(data);
+            getOfferOnly({...data, ...loan_details});
           }}
         />
       )}

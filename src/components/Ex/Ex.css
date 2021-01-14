@@ -1,0 +1,28 @@
+.ex__icon-container {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 1.2rem;
+  margin-top: 1.6rem;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ex__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ex__pattern {
+  bottom: 3rem;
+  right: 0;
+  z-index: 0;
+}
+/*# sourceMappingURL=Ex.css.map */

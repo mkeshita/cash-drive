@@ -1,0 +1,12 @@
+.contact__icon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-right: 2rem;
+}
+
+.contact__icon img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=Contact.css.map */

@@ -1,0 +1,231 @@
+.nav {
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  -webkit-transition: height 0.2s linear, background-color 0.2s linear;
+  transition: height 0.2s linear, background-color 0.2s linear;
+}
+
+.nav.sticky {
+  height: 75px;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #fff;
+}
+
+.nav__menu {
+  width: 100%;
+  display: none !important;
+}
+
+.nav__menu-mobile-btn {
+  height: 22px;
+  width: 30px;
+  position: relative;
+}
+
+.nav__menu-mobile-line {
+  height: 3px;
+  width: 100%;
+  display: block;
+  background-color: #153e74;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.nav__menu-mobile-line:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.nav__menu-mobile-line:first-child {
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
+.nav__menu-mobile-line:last-child {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+
+.nav__menu-mobile {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.nav__menu-mobile-links {
+  height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-transition: height 0.4s linear;
+  transition: height 0.4s linear;
+}
+
+.nav__menu-mobile-link-item {
+  height: 60px;
+  text-align: center;
+  color: #153e74;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.nav__menu-mobile-link-item .btn-block + .btn-block {
+  margin: 1rem 0 !important;
+}
+
+.nav__menu-mobile__header {
+  height: 70px;
+}
+
+.nav__menu-mobile.show {
+  background: #fff;
+}
+
+.nav__menu-mobile.show .nav__menu-mobile-links {
+  padding: 0 0 16px 0;
+  overflow: auto;
+  height: 446px;
+}
+
+.nav__menu-mobile.show .nav__menu-mobile-line:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  top: calc(50% - 1px);
+}
+
+.nav__menu-mobile.show .nav__menu-mobile-line:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: calc(50% - 2px);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.nav__menu-mobile.show .nav__menu-mobile-line:nth-child(2) {
+  width: 0%;
+  margin: 0;
+}
+
+.nav__item-right .btn-outline {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.nav__link {
+  padding-right: 2.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #020249;
+  font-weight: 500;
+  height: 50px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__link:hover {
+  text-decoration: none;
+}
+
+.nav__logo {
+  padding-right: 3.5rem;
+  height: 30px;
+  display: block;
+}
+
+.nav .btn {
+  height: 40px;
+  min-width: 130px;
+  color: #020249;
+  font-size: 0.9375rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  font-weight: 500;
+  background: var(--white);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.nav .btn-outline {
+  color: var(--white);
+  border: 1px solid var(--white);
+  background: transparent;
+}
+
+.nav .btn-outline--blue {
+  color: #153e74 !important;
+  border: 1px solid #153e74 !important;
+}
+
+.nav.sticky .btn {
+  color: white !important;
+  background: #153e74 !important;
+}
+
+.nav.sticky .btn-outline {
+  background: white !important;
+  color: #153e74 !important;
+  border: 1px solid #153e74 !important;
+}
+
+.nav__dropdown {
+  background: white;
+  left: 0;
+  min-width: 150px;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  display: none;
+  padding: 0 1rem;
+  top: 90%;
+}
+
+.nav__dropdown__link {
+  height: 55px;
+  color: #020249;
+  padding: 1rem 1.5rem 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none !important;
+}
+
+.nav__has-dropdown:hover .nav__dropdown {
+  display: block;
+}
+
+.nav__has-dropdown:hover svg path {
+  stroke: #153e74;
+}
+/*# sourceMappingURL=Navbar.css.map */

@@ -1,0 +1,42 @@
+.Modal {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.507);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1111;
+  display: none;
+}
+
+.Modal--open {
+  display: block;
+}
+
+.Modal__content {
+  max-width: 800px;
+  margin: 3% auto;
+  border-radius: 5px;
+}
+
+.Modal__title {
+  font-size: 2rem !important;
+}
+
+.Modal table td {
+  width: 50%;
+  font-size: 0.9rem;
+}
+
+.Modal table td.bold {
+  font-weight: 500;
+}
+
+.Modal .btn-grey {
+  background-color: #dee2e6;
+}
+
+.Modal .btn {
+  height: 40px;
+}
+/*# sourceMappingURL=Modal.css.map */

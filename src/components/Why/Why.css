@@ -1,0 +1,36 @@
+.why__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.why__icon-container {
+  height: 60px;
+  width: 60px;
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.21);
+}
+
+.why__list {
+  padding-top: 5rem;
+}
+
+.why__bg {
+  top: -63px;
+  left: 0;
+}
+
+.why__dots {
+  right: 0;
+  max-width: 100px;
+}
+/*# sourceMappingURL=Why.css.map */

@@ -1,0 +1,184 @@
+.bounced {
+  -webkit-animation: bounced linear 10s;
+          animation: bounced linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bounced linear 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bounced linear 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bounced linear 4s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bounced linear 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+.bounced-2 {
+  -webkit-animation: bounced linear 10s;
+          animation: bounced linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bounced linear 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bounced linear 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bounced linear 4s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bounced linear 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.bounced-3 {
+  -webkit-animation: bounced linear 10s;
+          animation: bounced linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bounced linear 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bounced linear 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bounced linear 4s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bounced linear 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.bounced-4 {
+  -webkit-animation: bounced linear 10s;
+          animation: bounced linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bounced linear 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bounced linear 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bounced linear 4s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bounced linear 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.bounced-5 {
+  -webkit-animation: bounced linear 10s;
+          animation: bounced linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bounced linear 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bounced linear 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bounced linear 4s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bounced linear 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+@keyframes bounced {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  49% {
+    -webkit-transform: translate(2px, -10px);
+            transform: translate(2px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
+  }
+}
+
+@-webkit-keyframes bounced {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+  }
+  49% {
+    -webkit-transform: translate(2px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(1px, 1px);
+  }
+}
+
+.drive {
+  animation: drive linear 15s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: drive linear 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: drive linear 15s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: drive linear 15s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: drive linear 15s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes drive {
+  0% {
+    -webkit-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
+  }
+  49% {
+    -webkit-transform: translate(-39px, 16px);
+            transform: translate(-39px, 16px);
+  }
+  49% {
+    -webkit-transform: translate(-39px, 16px);
+            transform: translate(-39px, 16px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 1px);
+            transform: translate(0px, 1px);
+  }
+}
+
+@-webkit-keyframes drive {
+  0% {
+    -webkit-transform: translate(1px, 1px);
+  }
+  49% {
+    -webkit-transform: translate(-39px, 16px);
+  }
+  49% {
+    -webkit-transform: translate(-39px, 16px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 1px);
+  }
+}
+/*# sourceMappingURL=Svganim.css.map */

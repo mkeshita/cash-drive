@@ -1,0 +1,20 @@
+.eval__icon {
+  width: 100%;
+}
+
+.eval__pattern {
+  left: 0;
+  bottom: 34%;
+  max-width: 100%;
+}
+
+.eval__space {
+  margin-top: 4rem;
+}
+
+@media only screen and (min-width: 767px) {
+  .eval__pattern {
+    bottom: 0;
+  }
+}
+/*# sourceMappingURL=Evaluate.css.map */

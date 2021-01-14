@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Select from 'react-select';
-import Slide from 'react-reveal/Slide';
-import './Modal.scss';
-import vehicles from '../../utils/vehicles.json';
-import nigerianStates from '../../utils/states.json';
-import Input from '../Input/Input';
-import Mixin from '../../utils/mixin';
+import React, {useState, useEffect} from "react";
+import Select from "react-select";
+import Slide from "react-reveal/Slide";
+import "./Modal.scss";
+import vehicles from "../../utils/vehicles.json";
+import nigerianStates from "../../utils/states.json";
+import Input from "../Input/Input";
+import Mixin from "../../utils/mixin";
 
 const vehicleDetails = vehicles[0].selections.years;
-function Modal({ submitVehicle, closeModal }) {
+function Modal({submitVehicle, closeModal, getOffer, offer}) {
   const [
     {
       year,
@@ -23,11 +23,10 @@ function Modal({ submitVehicle, closeModal }) {
     },
     setVehicle,
   ] = useState({});
-
   const [terms, setTerms] = useState(false);
   const [showDetails, setDetails] = useState(false);
 
-  const [{ makes, models, trims }, setTypes] = useState({
+  const [{makes, models, trims}, setTypes] = useState({
     makes: [],
     models: [],
     trims: [],
@@ -39,24 +38,24 @@ function Modal({ submitVehicle, closeModal }) {
     const error = !year
       ? "Please select the year"
       : !make
-        ? 'Please select the make of your car'
-        : !model
-          ? 'Please select the model of your car'
-          : !trim
-            ? 'Please select the body style of your car'
-            : !plate_number || !Mixin.validatePlateNumber(plate_number)
-              ? 'Please enter a valid plate number'
-              : !insurance
-                ? 'Please select the type of insurance on your car'
-                : !registered_owner
-                  ? 'Please select the answer to the question: Are you the registered owner?'
-                  : !state
-                    ? 'Please select the state your vehicle was registered'
-                    : !terms
-                      ? 'Please agree to the Terms & Conditions'
-                      : '';
+      ? "Please select the make of your car"
+      : !model
+      ? "Please select the model of your car"
+      : !trim
+      ? "Please select the body style of your car"
+      : !plate_number || !Mixin.validatePlateNumber(plate_number)
+      ? "Please enter a valid plate number"
+      : !insurance
+      ? "Please select the type of insurance on your car"
+      : !registered_owner
+      ? "Please select the answer to the question: Are you the registered owner?"
+      : !state
+      ? "Please select the state your vehicle was registered"
+      : !terms
+      ? "Please agree to the Terms & Conditions"
+      : "";
 
-    setVehicle((key) => ({ ...key, error }));
+    setVehicle((key) => ({...key, error}));
 
     if (!error.length) setDetails(true);
   };
@@ -64,7 +63,7 @@ function Modal({ submitVehicle, closeModal }) {
   const mapNames = (arr) => (arr ? arr.map((key) => key.name) : []);
 
   const formatSelectOptions = (arr) =>
-    arr ? arr.map((key) => ({ label: key, value: key })) : [];
+    arr ? arr.map((key) => ({label: key, value: key})) : [];
 
   const states = formatSelectOptions(nigerianStates);
 
@@ -111,8 +110,11 @@ function Modal({ submitVehicle, closeModal }) {
     <div className="Modal Modal--open">
       <Slide top duration={1500} delay={300}>
         <div
-          className='Modal__content bg-white round'
-          style={{ display: showDetails ? 'block' : 'none', maxWidth: '500px' }}
+          className="Modal__content bg-white round"
+          style={{
+            display: showDetails && !offer?.data ? "block" : "none",
+            maxWidth: "500px",
+          }}
         >
           <h3
             className="
@@ -163,14 +165,17 @@ function Modal({ submitVehicle, closeModal }) {
             <div className="btn-container mt-5 d-flex justify-content-end">
               <button
                 className="btn btn-grey px-5"
-                onClick={() => setDetails(false)}
+                onClick={() => {
+                  setDetails(false);
+                }}
               >
                 No
               </button>
               <button
                 className="btn btn-orange px-5 ml-3"
-                onClick={() =>
-                  submitVehicle({
+                // onClick={handleClick}
+                onClick={() => {
+                  getOffer({
                     year,
                     make,
                     model,
@@ -179,8 +184,8 @@ function Modal({ submitVehicle, closeModal }) {
                     registered_owner,
                     state,
                     plate_number,
-                  })
-                }
+                  });
+                }}
               >
                 Yes
               </button>
@@ -189,8 +194,8 @@ function Modal({ submitVehicle, closeModal }) {
         </div>
 
         <div
-          className='Modal__content bg-white round'
-          style={{ display: !showDetails ? 'block' : 'none', maxWidth: '800px' }}
+          className="Modal__content bg-white round"
+          style={{display: !showDetails ? "block" : "none", maxWidth: "800px"}}
         >
           <h3
             className="
@@ -205,8 +210,8 @@ function Modal({ submitVehicle, closeModal }) {
           >
             Tell us about your car
             <span
-              className='cursor'
-              style={{ fontWeight: '300', fontSize: '2rem', cursor: 'pointer' }}
+              className="cursor"
+              style={{fontWeight: "300", fontSize: "2rem", cursor: "pointer"}}
               onClick={() => closeModal()}
             >
               <img src="./images/cancel.svg" width="16" alt="cancel" />
@@ -226,7 +231,7 @@ function Modal({ submitVehicle, closeModal }) {
                 <Select
                   classNamePrefix="mySelect"
                   options={years}
-                  onChange={({ value }) =>
+                  onChange={({value}) =>
                     setVehicle((key) => ({
                       ...key,
                       year: value,
@@ -243,7 +248,7 @@ function Modal({ submitVehicle, closeModal }) {
                   classNamePrefix="mySelect"
                   options={makes}
                   value={make ? undefined : make}
-                  onChange={({ value }) =>
+                  onChange={({value}) =>
                     setVehicle((key) => ({
                       ...key,
                       make: value,
@@ -261,8 +266,8 @@ function Modal({ submitVehicle, closeModal }) {
                   classNamePrefix="mySelect"
                   options={models}
                   value={model ? undefined : model}
-                  onChange={({ value }) =>
-                    setVehicle((key) => ({ ...key, model: value, trim: null }))
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, model: value, trim: null}))
                   }
                 />
               </div>
@@ -273,8 +278,8 @@ function Modal({ submitVehicle, closeModal }) {
                 <Select
                   classNamePrefix="mySelect"
                   options={trims}
-                  onChange={({ value }) =>
-                    setVehicle((key) => ({ ...key, trim: value }))
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, trim: value}))
                   }
                   value={trim ? undefined : trim}
                 />
@@ -303,12 +308,12 @@ function Modal({ submitVehicle, closeModal }) {
                 <Select
                   classNamePrefix="mySelect"
                   options={[
-                    { label: 'Third Party', value: 'third party' },
-                    { label: 'Full', value: 'full' },
-                    { label: 'None', value: 'none' },
+                    {label: "Third Party", value: "third party"},
+                    {label: "Full", value: "full"},
+                    {label: "None", value: "none"},
                   ]}
-                  onChange={({ value }) =>
-                    setVehicle((key) => ({ ...key, insurance: value }))
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, insurance: value}))
                   }
                 />
               </div>
@@ -321,11 +326,11 @@ function Modal({ submitVehicle, closeModal }) {
                 <Select
                   classNamePrefix="mySelect"
                   options={[
-                    { value: 1, label: 'Yes' },
-                    { value: 2, label: 'No' },
+                    {value: 1, label: "Yes"},
+                    {value: 2, label: "No"},
                   ]}
-                  onChange={({ value }) =>
-                    setVehicle((key) => ({ ...key, registered_owner: value }))
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, registered_owner: value}))
                   }
                 />
               </div>
@@ -336,8 +341,8 @@ function Modal({ submitVehicle, closeModal }) {
                 <Select
                   classNamePrefix="mySelect"
                   options={states}
-                  onChange={({ value }) =>
-                    setVehicle((key) => ({ ...key, state: value }))
+                  onChange={({value}) =>
+                    setVehicle((key) => ({...key, state: value}))
                   }
                 />
               </div>
@@ -350,7 +355,7 @@ function Modal({ submitVehicle, closeModal }) {
                   id="exampleCheck1"
                   onChange={(e) => setTerms(!terms)}
                 />
-                <label class="form-check-label" for="exampleCheck1">
+                <label className="form-check-label" for="exampleCheck1">
                   I agree to the following Terms &amp; Conditions, Privacy
                   Policy, Electronic Disclosure
                 </label>
@@ -360,7 +365,7 @@ function Modal({ submitVehicle, closeModal }) {
             <div>
               <button
                 type="submit"
-                class="btn btn-block btn-orange shadow"
+                className="btn btn-block btn-orange shadow"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -372,6 +377,76 @@ function Modal({ submitVehicle, closeModal }) {
               </button>
             </div>
           </form>
+        </div>
+
+        <div
+          className="Modal__content bg-white round"
+          style={{display: offer?.data ? "block" : "none", maxWidth: "500px"}}
+        >
+          <div className="text-center pb-5">
+            <img
+              alt="congrat"
+              className="my-4 mt-5"
+              src="./images/undraw_city_driver_jh2h.svg"
+            />
+
+            <h3>Congratualtions!</h3>
+            <p className="mb-3">
+              Your application has been provisionally approved
+            </p>
+
+            <div
+              className="border py-3"
+              style={{width: "80%", marginLeft: "10%"}}
+            >
+              <div className="py-2">
+                <span className="title" style={{fontSize: "1.13rem"}}>
+                  Offer:
+                </span>
+                <span className="pl-2">{offer?.data?.offer_amount}</span>
+              </div>
+              <div className="py-2">
+                <span className="title" style={{fontSize: "1.13rem"}}>
+                  Duration:
+                </span>
+                <span className="pl-2">{offer?.data?.offer_tenor} Months</span>
+              </div>
+              <div className="py-2">
+                <span className="title" style={{fontSize: "1.13rem"}}>
+                  Repayment Plan:
+                </span>
+                <span className="pl-2">
+                  Every {offer?.data?.offer_repayment_plan} Month
+                </span>
+              </div>
+              <div className="text-center pt-4">
+                <p>Do you accept this offer?</p>
+                <button
+                  className="btn btn-grey px-5"
+                  onClick={() => setDetails(false)}
+                >
+                  No
+                </button>
+                <button
+                  className="btn btn-orange px-5 ml-3"
+                  onClick={() =>
+                    submitVehicle({
+                      year,
+                      make,
+                      model,
+                      trim,
+                      insurance,
+                      registered_owner,
+                      state,
+                      plate_number,
+                    })
+                  }
+                >
+                  Yes
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </Slide>
     </div>
