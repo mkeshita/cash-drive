@@ -30,13 +30,13 @@ function Footer({location}) {
             <NavLink to="/about" exact className="footer__link">
               About us
             </NavLink>
-            <a href="#how-it-works" className="footer__link">
+            <a href="/how-it-works" className="footer__link">
               How it works
             </a>
-            <a href="#car-evaluation" className="footer__link">
+            <a href="/#car-evaluation" className="footer__link">
               Car evaluation
             </a>
-            <NavLink to="/privacy" exact className="footer__link">
+            <NavLink to="/privacy-policy" exact className="footer__link">
               Privacy Policy
             </NavLink>
           </div>
@@ -46,21 +46,33 @@ function Footer({location}) {
             <p className="footer__link">+234 817 555 6789</p>
             <p className="footer__link">+234 703 491 2176</p>
             <div className="footer__social-link d-flex align-items-sm-end justify-content-center justify-content-sm-start">
-              <a href="#!">
+              <a
+                href="https://www.facebook.com/Cashdrive-100248264874197/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   src="./images/fb.svg"
                   style={{height: "18px", marginRight: "1rem"}}
                   alt="facebook"
                 />
               </a>
-              <a href="#!">
+              <a
+                href="https://www.linkedin.com/company/cashdrive"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   src="./images/linkedin-in.svg"
                   style={{height: "20px", marginRight: "1rem"}}
                   alt="linkedIn"
                 />
               </a>
-              <a href="#!">
+              <a
+                href="https://www.instagram.com/cashdrive/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   src="./images/ins.svg"
                   style={{height: "18px", marginRight: "1rem"}}

@@ -60,17 +60,29 @@ function ContactContent() {
 
             <div className="d-flex mt-4">
               <div className="mr-4">
-                <a href="#!">
+                <a
+                  href="https://www.facebook.com/Cashdrive-100248264874197/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src="./images/socials/facebook.svg" alt="facebook" />
                 </a>
               </div>
               <div className="mr-4">
-                <a href="#!">
+                <a
+                  href="https://www.instagram.com/cashdrive/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src="./images/socials/instagram.svg" alt="facebook" />
                 </a>
               </div>
               <div className="mr-4">
-                <a href="#!">
+                <a
+                  href="https://www.linkedin.com/company/cashdrive"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src="./images/socials/linkedin.svg" alt="facebook" />
                 </a>
               </div>

@@ -26,7 +26,8 @@ function Strip() {
             <div className="text-left mt-5 mt-md-0 text-md-right position-relateive d-flex  flex-column">
               <a
                 href="/#hero"
-                className="btn btn-sm-inline-block text-center strip__btn bg-white px-5 mb-2 align-self-start align-self-md-end d-flex align-items-center"
+                style={{zIndex: 12}}
+                className="btn position-relative btn-sm-inline-block text-center strip__btn bg-white px-5 mb-2 align-self-start align-self-md-end d-flex align-items-center"
               >
                 Get Offer
               </a>
@@ -37,7 +38,7 @@ function Strip() {
                 src="./images/strip-img.png"
                 className="position-absolute"
                 alt="pattern"
-                style={{bottom: 0, maxWidth: "130px", right: "5rem"}}
+                style={{bottom: 0, maxWidth: "130px", right: "5rem", zIndex: 1}}
               />
             </div>
           </Fade>
