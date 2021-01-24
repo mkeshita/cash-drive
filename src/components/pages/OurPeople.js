@@ -1,5 +1,4 @@
 import React, {useLayoutEffect} from "react";
-import Culture from "../Ourpeople/Culture";
 import FirstSection from "../Ourpeople/FirstSec";
 import JoinUs from "../Ourpeople/JoinUs";
 import OurCultureSlideContainer from "../Ourpeople/OurCultureSlideContainer";
@@ -14,7 +13,6 @@ function OurPeople() {
     <>
       <OurPeopleHero />
       <FirstSection />
-      <Culture />
       <OurCultureSlideContainer />
       <Testimonial />
       <JoinUs />

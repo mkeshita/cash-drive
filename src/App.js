@@ -10,11 +10,12 @@ import Contact from "./components/pages/Contact";
 import "./App.scss";
 // import LoginPage from "./components/pages/LoginPage";
 import Privacy from "./components/pages/Privacy";
+import {TeamProvider} from "./context/TeamContext";
 
 function App() {
   const location = useLocation();
   return (
-    <>
+    <TeamProvider>
       <Navbar currentPath={location} />
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
@@ -24,7 +25,7 @@ function App() {
       <Route path="/how-it-works" component={Work} />
       <Route path="/privacy-policy" component={Privacy} />
       <Footer location={location.pathname} />
-    </>
+    </TeamProvider>
   );
 }
 

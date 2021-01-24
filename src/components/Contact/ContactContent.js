@@ -115,6 +115,7 @@ function ContactContent() {
                   placeholder="Full Name"
                   value={fullName}
                   readOnly={loading}
+                  pattern="^[a-z ,.'-]+$"
                   onChange={(e) => setFullName(e.target.value)}
                 />
               </div>
@@ -126,6 +127,7 @@ function ContactContent() {
                   placeholder="Email"
                   value={email}
                   readOnly={loading}
+                  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
