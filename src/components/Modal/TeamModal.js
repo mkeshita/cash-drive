@@ -15,7 +15,7 @@ function TeamModal() {
 
   return (
     <div
-      className={showModal ? "modal fade show d-block" : "modal d-none"}
+      className={showModal ? "modal fade show d-block" : "modal"}
       id="exampleModal"
       tabIndex={-1}
       role="dialog"
@@ -45,9 +45,10 @@ function TeamModal() {
           </div>
           <div className="modal-body">
             <div className="row">
-              <div className="col-sm-5">
+              <div className="col-sm-5 mb-4 mb-sm-0">
                 <img
                   alt="team"
+                  className="rounded"
                   src={
                     teamData[index].picture
                       ? `./images/${teamData[index]?.picture}.jpg`
@@ -59,13 +60,13 @@ function TeamModal() {
               <div className="col-sm-7">
                 <div className="d-flex align-items-start mb-2">
                   <span className="text-muted">Department:</span>
-                  <p style={{fontWeight: "600"}} className="m-0 pl-3">
+                  <p style={{fontWeight: "600"}} className="m-0 pl-2">
                     {teamData[index].department}
                   </p>
                 </div>
                 <div className="d-flex align-items-start mb-2 border-bottom pb-3">
                   <span className="text-muted">Role:</span>
-                  <p style={{fontWeight: "600"}} className="m-0 pl-3">
+                  <p style={{fontWeight: "600"}} className="m-0 pl-2">
                     {teamData[index].role}
                   </p>
                 </div>
@@ -75,7 +76,7 @@ function TeamModal() {
                 </div>
                 <div className="">
                   <span className="title title--small">Education</span>
-                  <p className="text-muted">{teamData[index].education}</p>
+                  <p>{teamData[index].education}</p>
                 </div>
               </div>
             </div>

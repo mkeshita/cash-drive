@@ -39,7 +39,7 @@ function OurCultureSlide() {
       >
         {teamData.map((data, i) => (
           <SwiperSlide key={i}>
-            <div className="bg-white border shadow-sm text-center p-4 team-slide">
+            <div className="bg-white border shadow-sm text-center p-4 mb-1 team-slide">
               <div className="slideImgContainer mx-auto my-2">
                 <img
                   alt="team"
