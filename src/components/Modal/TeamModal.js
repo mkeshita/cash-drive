@@ -1,0 +1,89 @@
+import React, {useContext} from "react";
+import {TeamContext} from "../../context/TeamContext";
+// import "./Modal.scss";
+
+function TeamModal() {
+  const {showModal, index, teamData, setshowModal} = useContext(
+    TeamContext
+  ).contextValue;
+
+  const handleModalClick = (e) => {
+    if (e.target.classList[0] === "modal") {
+      setshowModal(false);
+    }
+  };
+
+  return (
+    <div
+      className={showModal ? "modal fade show d-block" : "modal d-none"}
+      id="exampleModal"
+      tabIndex={-1}
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style={{
+        paddingRight: 16,
+        background: "rgba(0,0,0,.5)",
+      }}
+      onClick={(e) => handleModalClick(e)}
+    >
+      <div className="modal-dialog" role="document">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModalLabel">
+              {teamData[index]?.firstname} {teamData[index]?.middlename}{" "}
+              {teamData[index].lastname}
+            </h5>
+            <button
+              type="button"
+              className="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              onClick={() => setshowModal(false)}
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div className="modal-body">
+            <div className="row">
+              <div className="col-sm-5">
+                <img
+                  alt="team"
+                  src={
+                    teamData[index].picture
+                      ? `./images/${teamData[index]?.picture}.jpg`
+                      : `./images/profile-pix.png`
+                  }
+                  width="100%"
+                />
+              </div>
+              <div className="col-sm-7">
+                <div className="d-flex align-items-start mb-2">
+                  <span className="text-muted">Department:</span>
+                  <p style={{fontWeight: "600"}} className="m-0 pl-3">
+                    {teamData[index].department}
+                  </p>
+                </div>
+                <div className="d-flex align-items-start mb-2 border-bottom pb-3">
+                  <span className="text-muted">Role:</span>
+                  <p style={{fontWeight: "600"}} className="m-0 pl-3">
+                    {teamData[index].role}
+                  </p>
+                </div>
+                <div className="border-bottom mb-2 pb-3">
+                  <span className="title title--small">Experience</span>
+                  <p className="m-0">{teamData[index].experience}</p>
+                </div>
+                <div className="">
+                  <span className="title title--small">Education</span>
+                  <p className="text-muted">{teamData[index].education}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default TeamModal;

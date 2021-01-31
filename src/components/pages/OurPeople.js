@@ -1,4 +1,5 @@
 import React, {useLayoutEffect} from "react";
+import TeamModal from "../Modal/TeamModal";
 import FirstSection from "../Ourpeople/FirstSec";
 import JoinUs from "../Ourpeople/JoinUs";
 import OurCultureSlideContainer from "../Ourpeople/OurCultureSlideContainer";
@@ -11,6 +12,7 @@ function OurPeople() {
   });
   return (
     <>
+      <TeamModal />
       <OurPeopleHero />
       <FirstSection />
       <OurCultureSlideContainer />

@@ -4,8 +4,12 @@ import React from "react";
 export const TeamContext = createContext();
 
 export const TeamProvider = (props) => {
-  const [teamData, setTeamData] = useState([
+  const [showModal, setshowModal] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const teamData = [
     {
+      // Aa headshot(1)
       picture: "enoma",
       firstname: "Enoma",
       middlename: "",
@@ -16,7 +20,7 @@ export const TeamProvider = (props) => {
       education: "University of East Anglia (LLB), University of Warwick (LLM)",
     },
     {
-      // Cc Portrait 5
+      //Cc Portrait 5
       picture: "Kingsley",
       firstname: "Kingsley",
       middlename: "Ojima",
@@ -29,7 +33,7 @@ export const TeamProvider = (props) => {
     },
     {
       // aa Headshot
-      picture: "Emmanuel",
+      // picture: "Emmanuel",
       firstname: "Emmanuel",
       middlename: "Chigozirim",
       lastname: "Onwuna",
@@ -42,7 +46,7 @@ export const TeamProvider = (props) => {
     },
     {
       // aa Headshot
-      picture: "Nkiruka",
+      // picture: "Nkiruka",
       firstname: "Nkiruka",
       middlename: "Noella",
       lastname: "Ndulue",
@@ -51,9 +55,109 @@ export const TeamProvider = (props) => {
       experience: "Zero finance Limited",
       education: "University of Benin B.Sc Economics and Statistics",
     },
-  ]);
+    {
+      // Cc portrait 9
+      picture: "Goodness",
+      firstname: "Goodness",
+      middlename: "Iheoma",
+      lastname: "Nwankpa",
+      department: "Credit Management",
+      role: "Customer service/Admin",
+      experience: "Cornerstone Insurance Custodian Insurance",
+      education: "Madonna University, B.Sc Biochemistry",
+    },
+    {
+      // Aa headshots 7
+      picture: "Kelechi",
+      firstname: "Kelechi",
+      middlename: "Vivian",
+      lastname: "Okeke",
+      department: "Credit Management",
+      role: "Intern",
+      experience: "",
+      education: "Covenant University B.Sc. Banking and Finance",
+    },
+    {
+      // Bb headshot9
+      picture: "Chinonye",
+      firstname: "Chinonye",
+      middlename: "Blessing",
+      lastname: "Omerenma",
+      department: "Credit Management",
+      role: "Head, Credit Management & Origination",
+      experience: "Co-link Investment management Company Ltd ",
+      education: "University of Nigeria, Nsukka, B.sc Microbiology",
+    },
+    {
+      // Cc portraits 21A
+      picture: "Olumide",
+      firstname: "Olumide",
+      middlename: "Adeyemi",
+      lastname: "Odukoya",
+      department: "Finance & Accounting",
+      role: "Financial Controller",
+      experience:
+        "Broadview microfinance bank, Taurus Accounting & Tax Professionals, Olak Travels, Guaranty Trust Bank, Superior Games Limited,  Waveline growth partners ltd  ",
+      education: "The Polytechnic Ibadan, HND in Accounting",
+    },
+    {
+      // Aa Headshots (10)
+      picture: "Elizabeth",
+      firstname: "Elizabeth",
+      middlename: "Omolola",
+      lastname: "Oyelade",
+      department: "Finance & Accounting",
+      role: "Accountant",
+      experience: "Accounting Business Concept, Triversa Limited",
+      education: "University of Lagos (B.sc Accounting)",
+    },
+    {
+      //  Cc portraits (15)
+      picture: "Seyifunmi",
+      firstname: "Seyifunmi",
+      middlename: "Olakunde",
+      lastname: "Yewande",
+      department: "Finance & Accounting",
+      role: "Financial Analyst",
+      experience: "Adesanya and Partners, Page Financials",
+      education:
+        "Obafemi Awolowo University B.Sc. Politics, Philosophy and Economics",
+    },
+    {
+      //  Aa headshots 2
+      picture: "Omozokpia",
+      firstname: "Omozokpia",
+      lastname: "Ehikhamenor",
+      department: "Risk",
+      role: "Risk Manager",
+      experience: "Zenith Capital, Marathon Asset and Fund Management",
+      education: "University of Benin B.Sc. Agriculture, Tekedia Institute MBA",
+    },
+    {
+      // no picuture labeled
+      firstname: "Oluwatosin",
+      middlename: "Ezekiel",
+      lastname: "Ikudayisi",
+      department: "I.T",
+      role: "Software Developer",
+      experience: "Icredence Solutions, Valued Seed Limited, Princeps Finance",
+      education:
+        "Nigeria Army Institute of Technology & Environmental studies. 	(HND computer science)",
+    },
+    {
+      // aa headshot (12)
+      picture: "Olatunji",
+      firstname: "Olatunji",
+      lastname: "Ishmael",
+      department: "I.T",
+      role: "Head- Product Manager",
+      experience: "i-Sitek Network and Services",
+      education:
+        "Yaba College of Technology, HND, Industrial Maintenance Engineering",
+    },
+  ];
 
-  const contextValue = {teamData};
+  const contextValue = {teamData, setshowModal, showModal, setIndex, index};
 
   return (
     <TeamContext.Provider value={{contextValue}}>
@@ -61,3 +165,12 @@ export const TeamProvider = (props) => {
     </TeamContext.Provider>
   );
 };
+
+/*{
+  firstname: "
+  lastname: "
+  department: "
+  role: "
+  experience: "
+  education: "
+}*/
