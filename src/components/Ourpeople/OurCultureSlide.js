@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import {TeamContext} from "../../context/TeamContext";
 import {Swiper, SwiperSlide} from "swiper/react";
 import "./OurCulture.scss";
+import SwiperCore, {Autoplay} from "swiper";
 
 function OurCultureSlide() {
   const {teamData, setshowModal, setIndex} = useContext(
@@ -13,8 +14,10 @@ function OurCultureSlide() {
     setshowModal(true);
   };
 
+  SwiperCore.use([Autoplay]);
+
   return (
-    <div className="container">
+    <div className="oc container">
       <Swiper
         breakpoints={{
           // when window width is >= 640px
@@ -33,7 +36,7 @@ function OurCultureSlide() {
           },
         }}
         spaceBetween={20}
-        autoplay={false}
+        autoplay={{delay: 3000}}
         slidesPerView={4}
         loop={true}
       >

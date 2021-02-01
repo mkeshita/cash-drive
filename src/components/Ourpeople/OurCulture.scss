@@ -16,3 +16,11 @@
 .team-slide {
   border-radius: 1rem;
 }
+
+.oc .slider__container {
+  transform: rotate(180deg);
+
+  .swiper-slide {
+    transform: rotate(180deg);
+  }
+}
