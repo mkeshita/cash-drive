@@ -9,7 +9,77 @@ export const TeamProvider = (props) => {
 
   const teamData = [
     {
+      // aa headshot 14
+      id: 0,
+      picture: "Jerry",
+      firstname: "Jerry",
+      lastname: "Ehanmo",
+      department: "Advisory",
+      role: "",
+      experience:
+        "PwC, Income Electrix, Baker Hughes (A GE Company) , British Telecoms",
+      education: "University of Dundee (MSc) University of Aberdeen (MBA)",
+    },
+    {
+      // aa headshot 13
+      id: 1,
+      picture: "Doyin",
+      firstname: "Doyin",
+      lastname: "Adebiyi",
+      department: "Advisory",
+      role: "",
+      experience: "GTB Plc, Bureau Veritas UK, Oando Plc.",
+      education:
+        "KNUST Ghana (B.A. Hons Economics and Law), University of Dundee (MSc and MBA)",
+    },
+    {
+      id: 2,
+      // picture: "Babatope",
+      firstname: "Babatope",
+      lastname: "Olabode",
+      department: "Advisory",
+      role: "",
+      experience:
+        "Senior Finance Analyst - Chevron Nigeria Ltd                        Treasurer – Chevron Employees Multipurpose Multipurpose & Credit Society Ltd ",
+      education:
+        "MBA (American InterContinental University, Houston B.Sc. Accounting (O.A.U)",
+    },
+    {
+      id: 3,
+      // picture: "Jon",
+      firstname: "Dr. Jon",
+      middlename: "Abbas",
+      Lastname: "Zaidi",
+      department: "Advisory",
+      role: "",
+      experience:
+        "Deloitte, President – EDELAP, President - AES Corporation, Director - Kyivenergo",
+      education: "HEC Paris, Said Business School, 	Oxford University (MSc)",
+    },
+    {
+      id: 4,
+      // picture: "George",
+      firstname: "George",
+      lastname: "Etomi",
+      department: "Advisory",
+      role: "",
+      experience:
+        "Chairman - Springfield Group, Principal Partner - George Etomi & Partners",
+      education: "London School of Economics (LLM)",
+    },
+    {
+      id: 5,
+      // picture: "Olufemi",
+      firstname: "Olufemi",
+      lastname: "Adebiyi",
+      department: "Advisory",
+      role: "CEO",
+      experience: "CEO – Legwork Limited, Accenture USA,",
+      education: "Louisiana State University (PHD Chem. Eng.)",
+    },
+    {
       // Aa headshot(1)
+      id: 6,
       picture: "enoma",
       firstname: "Enoma",
       middlename: "",
@@ -21,6 +91,7 @@ export const TeamProvider = (props) => {
     },
     {
       //Cc Portrait 5
+      id: 7,
       picture: "Kingsley",
       firstname: "Kingsley",
       middlename: "Ojima",
@@ -34,6 +105,7 @@ export const TeamProvider = (props) => {
     {
       // aa Headshot
       // picture: "Emmanuel",
+      id: 8,
       firstname: "Emmanuel",
       middlename: "Chigozirim",
       lastname: "Onwuna",
@@ -47,6 +119,7 @@ export const TeamProvider = (props) => {
     {
       // aa Headshot
       // picture: "Nkiruka",
+      id: 9,
       firstname: "Nkiruka",
       middlename: "Noella",
       lastname: "Ndulue",
@@ -57,6 +130,7 @@ export const TeamProvider = (props) => {
     },
     {
       // Cc portrait 9
+      id: 10,
       picture: "Goodness",
       firstname: "Goodness",
       middlename: "Iheoma",
@@ -68,6 +142,7 @@ export const TeamProvider = (props) => {
     },
     {
       // Aa headshots 7
+      id: 11,
       picture: "Kelechi",
       firstname: "Kelechi",
       middlename: "Vivian",
@@ -79,6 +154,7 @@ export const TeamProvider = (props) => {
     },
     {
       // Bb headshot9
+      id: 12,
       picture: "Chinonye",
       firstname: "Chinonye",
       middlename: "Blessing",
@@ -90,6 +166,7 @@ export const TeamProvider = (props) => {
     },
     {
       // Cc portraits 21A
+      id: 13,
       picture: "Olumide",
       firstname: "Olumide",
       middlename: "Adeyemi",
@@ -102,6 +179,7 @@ export const TeamProvider = (props) => {
     },
     {
       // Aa Headshots (10)
+      id: 14,
       picture: "Elizabeth",
       firstname: "Elizabeth",
       middlename: "Omolola",
@@ -113,6 +191,7 @@ export const TeamProvider = (props) => {
     },
     {
       //  Cc portraits (15)
+      id: 15,
       picture: "Seyifunmi",
       firstname: "Seyifunmi",
       middlename: "Olakunde",
@@ -125,6 +204,7 @@ export const TeamProvider = (props) => {
     },
     {
       //  Aa headshots 2
+      id: 16,
       picture: "Omozokpia",
       firstname: "Omozokpia",
       lastname: "Ehikhamenor",
@@ -135,6 +215,7 @@ export const TeamProvider = (props) => {
     },
     {
       // no picuture labeled
+      id: 17,
       firstname: "Oluwatosin",
       middlename: "Ezekiel",
       lastname: "Ikudayisi",
@@ -146,6 +227,7 @@ export const TeamProvider = (props) => {
     },
     {
       // aa headshot (12)
+      id: 18,
       picture: "Olatunji",
       firstname: "Olatunji",
       lastname: "Ishmael",
@@ -157,7 +239,13 @@ export const TeamProvider = (props) => {
     },
   ];
 
-  const contextValue = {teamData, setshowModal, showModal, setIndex, index};
+  const contextValue = {
+    teamData,
+    setshowModal,
+    showModal,
+    setIndex,
+    index,
+  };
 
   return (
     <TeamContext.Provider value={{contextValue}}>

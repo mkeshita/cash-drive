@@ -1,5 +1,6 @@
 import React from "react";
 import OurCultureSlide from "./OurCultureSlide";
+import OurCultureSlideTwo from "./OurCultureSlideTwo";
 
 function OurCultureSlideContainer() {
   return (
@@ -11,6 +12,9 @@ function OurCultureSlideContainer() {
           eiusmod tempor
         </p>
       </div>
+      <OurCultureSlideTwo />
+      <br />
+      <br />
       <OurCultureSlide />
     </section>
   );

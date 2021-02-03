@@ -4,7 +4,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "./OurCulture.scss";
 import SwiperCore, {Autoplay} from "swiper";
 
-function OurCultureSlide() {
+function OurCultureSlideTwo() {
   const {teamData, setshowModal, setIndex} = useContext(
     TeamContext
   ).contextValue;
@@ -18,8 +18,8 @@ function OurCultureSlide() {
 
   return (
     <div className="oc container">
-      <h4 className="title text-center pb-2 mb-3" style={{fontSize: "1.8rem"}}>
-        Other teams
+      <h4 className="title pb-2 mb-3 text-center" style={{fontSize: "1.8rem"}}>
+        Advisory team
       </h4>
       <Swiper
         breakpoints={{
@@ -43,8 +43,8 @@ function OurCultureSlide() {
         slidesPerView={4}
         loop={true}
       >
-        {teamData.slice(5).map((data, i) => (
-          <SwiperSlide key={data.id}>
+        {teamData.slice(0, 6).map((data, i) => (
+          <SwiperSlide key={data.i}>
             <div className="bg-white border shadow-sm text-center p-4 mb-1 team-slide">
               <div className="slideImgContainer mx-auto my-2">
                 <img
@@ -59,16 +59,9 @@ function OurCultureSlide() {
               <h6 className="pt-4 text-truncate" style={{whiteSpace: "nowrap"}}>
                 {data?.firstname} {data?.middlename} {data?.lastname}
               </h6>
-              <p
-                className="text-muted text-truncate"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Tooltip on top"
-              >
-                {data.role || "..."}
-              </p>
+
               <button
-                className="btn shadow px-3 btn-blue text-white"
+                className="btn shadow mt-3 px-3 btn-blue text-white"
                 style={{height: "40px", background: "#153e74"}}
                 onClick={() => handleClick(data.id)}
               >
@@ -83,4 +76,4 @@ function OurCultureSlide() {
   );
 }
 
-export default OurCultureSlide;
+export default OurCultureSlideTwo;
